@@ -1,6 +1,25 @@
 fileFormatVersion: 2
 guid: 2a159bdc7be70234384f7e7f052ca583
 TextureImporter:
+  fileIDToRecycleName:
+    21300000: BlueUnits_0
+    21300002: BlueUnits_1
+    21300004: BlueUnits_2
+    21300006: BlueUnits_3
+    21300008: BlueUnits_4
+    21300010: BlueUnits_5
+    21300012: BlueUnits_6
+    21300014: BlueUnits_7
+    21300016: BlueUnits_8
+    21300018: BlueUnits_9
+    21300020: BlueUnits_10
+    21300022: BlueUnits_11
+    21300024: BlueUnits_12
+    21300026: BlueUnits_13
+    21300028: BlueUnits_14
+    21300030: BlueUnits_15
+    21300032: BlueUnits_16
+    21300034: BlueUnits_17
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -26,7 +45,7 @@ TextureImporter:
     filterMode: -1
     aniso: -1
     mipBias: -1
-    wrapMode: -1
+    wrapMode: 1
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
@@ -35,11 +54,192 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spritePixelsToUnits: 100
   alphaIsTransparency: 1
   textureType: 8
   buildTargetSettings: []
   spriteSheet:
-    sprites: []
+    sprites:
+    - name: BlueUnits_0
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 3
+        width: 13
+        height: 15
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BlueUnits_1
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 3
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BlueUnits_2
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 3
+        width: 13
+        height: 14
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BlueUnits_3
+      rect:
+        serializedVersion: 2
+        x: 58
+        y: 3
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BlueUnits_4
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 3
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BlueUnits_5
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 3
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BlueUnits_6
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 3
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BlueUnits_7
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 3
+        width: 14
+        height: 15
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BlueUnits_8
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 3
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BlueUnits_9
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 3
+        width: 14
+        height: 16
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BlueUnits_10
+      rect:
+        serializedVersion: 2
+        x: 183
+        y: 4
+        width: 15
+        height: 16
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BlueUnits_11
+      rect:
+        serializedVersion: 2
+        x: 201
+        y: 3
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BlueUnits_12
+      rect:
+        serializedVersion: 2
+        x: 220
+        y: 4
+        width: 15
+        height: 14
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BlueUnits_13
+      rect:
+        serializedVersion: 2
+        x: 237
+        y: 3
+        width: 16
+        height: 15
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BlueUnits_14
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 5
+        width: 16
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BlueUnits_15
+      rect:
+        serializedVersion: 2
+        x: 275
+        y: 5
+        width: 13
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BlueUnits_16
+      rect:
+        serializedVersion: 2
+        x: 291
+        y: 7
+        width: 16
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BlueUnits_17
+      rect:
+        serializedVersion: 2
+        x: 309
+        y: 4
+        width: 16
+        height: 14
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 
