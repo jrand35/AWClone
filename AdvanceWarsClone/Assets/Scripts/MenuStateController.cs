@@ -12,18 +12,12 @@ public class MenuStateController : MonoBehaviour {
     public delegate void MenuStateHandler(MenuStateController.menuStates newState);
     public static event MenuStateHandler onStateChange;
 
-    void OnDisable()
+    public void goToMapSelect()
     {
-
+        onStateChange(MenuStateController.menuStates.mapSelect);
     }
 
-	// Use this for initialization
-	void Start () {
-	
-	}
-	
-	// Update is called once per frame
+    //Possibly use for changing states
 	void LateUpdate () {
-	    //Change states
 	}
 }
