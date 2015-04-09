@@ -41,6 +41,7 @@ public class MenuStateListener : MonoBehaviour {
                     titleScreenActive = true;
                     mapSelectActive = false;
                     titleScreenObject.SetActive(true);
+                    mapSelectObject.SetActive(false);
                 }
                 break;
 
@@ -49,6 +50,7 @@ public class MenuStateListener : MonoBehaviour {
                 {
                     titleScreenActive = false;
                     mapSelectActive = true;
+                    titleScreenObject.SetActive(false);
                     mapSelectObject.SetActive(true);
                 }
                 break;
