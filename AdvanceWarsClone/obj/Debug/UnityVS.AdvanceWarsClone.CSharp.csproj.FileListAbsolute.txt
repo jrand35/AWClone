@@ -1,0 +1,9 @@
+C:\Users\jrand\Documents\GitHub\AWClone\AdvanceWarsClone\Temp\UnityVS_bin\Debug\Assembly-CSharp.dll
+C:\Users\jrand\Documents\GitHub\AWClone\AdvanceWarsClone\Temp\UnityVS_bin\Debug\Assembly-CSharp.pdb
+C:\Users\jrand\Documents\GitHub\AWClone\AdvanceWarsClone\Temp\UnityVS_bin\Debug\UnityEditor.dll
+C:\Users\jrand\Documents\GitHub\AWClone\AdvanceWarsClone\Temp\UnityVS_bin\Debug\UnityEngine.dll
+C:\Users\jrand\Documents\GitHub\AWClone\AdvanceWarsClone\Temp\UnityVS_bin\Debug\UnityEngine.xml
+C:\Users\jrand\Documents\GitHub\AWClone\AdvanceWarsClone\Temp\UnityVS_bin\Debug\UnityEditor.xml
+C:\Users\jrand\Documents\GitHub\AWClone\AdvanceWarsClone\obj\Debug\UnityVS.AdvanceWarsClone.CSharp.csprojResolveAssemblyReference.cache
+C:\Users\jrand\Documents\GitHub\AWClone\AdvanceWarsClone\obj\Debug\Assembly-CSharp.dll
+C:\Users\jrand\Documents\GitHub\AWClone\AdvanceWarsClone\obj\Debug\Assembly-CSharp.pdb
