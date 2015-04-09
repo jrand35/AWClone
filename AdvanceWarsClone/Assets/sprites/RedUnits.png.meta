@@ -1,6 +1,25 @@
 fileFormatVersion: 2
 guid: 4e78ca702c0c570428043146f6661df7
 TextureImporter:
+  fileIDToRecycleName:
+    21300000: RedUnits_0
+    21300002: RedUnits_1
+    21300004: RedUnits_2
+    21300006: RedUnits_3
+    21300008: RedUnits_4
+    21300010: RedUnits_5
+    21300012: RedUnits_6
+    21300014: RedUnits_7
+    21300016: RedUnits_8
+    21300018: RedUnits_9
+    21300020: RedUnits_10
+    21300022: RedUnits_11
+    21300024: RedUnits_12
+    21300026: RedUnits_13
+    21300028: RedUnits_14
+    21300030: RedUnits_15
+    21300032: RedUnits_16
+    21300034: RedUnits_17
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -26,20 +45,201 @@ TextureImporter:
     filterMode: -1
     aniso: -1
     mipBias: -1
-    wrapMode: -1
+    wrapMode: 1
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spritePixelsToUnits: 100
   alphaIsTransparency: 1
   textureType: 8
   buildTargetSettings: []
   spriteSheet:
-    sprites: []
+    sprites:
+    - name: RedUnits_0
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 4
+        width: 14
+        height: 15
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: RedUnits_1
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 4
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: RedUnits_2
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 4
+        width: 13
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: RedUnits_3
+      rect:
+        serializedVersion: 2
+        x: 58
+        y: 4
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: RedUnits_4
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 4
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: RedUnits_5
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 4
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: RedUnits_6
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 4
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: RedUnits_7
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 4
+        width: 14
+        height: 15
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: RedUnits_8
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 4
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: RedUnits_9
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 4
+        width: 14
+        height: 16
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: RedUnits_10
+      rect:
+        serializedVersion: 2
+        x: 183
+        y: 5
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: RedUnits_11
+      rect:
+        serializedVersion: 2
+        x: 201
+        y: 4
+        width: 16
+        height: 15
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: RedUnits_12
+      rect:
+        serializedVersion: 2
+        x: 220
+        y: 5
+        width: 15
+        height: 14
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: RedUnits_13
+      rect:
+        serializedVersion: 2
+        x: 237
+        y: 4
+        width: 16
+        height: 15
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: RedUnits_14
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 6
+        width: 16
+        height: 13
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: RedUnits_15
+      rect:
+        serializedVersion: 2
+        x: 275
+        y: 6
+        width: 13
+        height: 12
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: RedUnits_16
+      rect:
+        serializedVersion: 2
+        x: 291
+        y: 7
+        width: 16
+        height: 12
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: RedUnits_17
+      rect:
+        serializedVersion: 2
+        x: 309
+        y: 5
+        width: 16
+        height: 14
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 

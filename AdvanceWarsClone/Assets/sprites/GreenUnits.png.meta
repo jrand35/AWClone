@@ -1,6 +1,25 @@
 fileFormatVersion: 2
 guid: e5154f9b74f56e243a1daad85f033c76
 TextureImporter:
+  fileIDToRecycleName:
+    21300000: GreenUnits_0
+    21300002: GreenUnits_1
+    21300004: GreenUnits_2
+    21300006: GreenUnits_3
+    21300008: GreenUnits_4
+    21300010: GreenUnits_5
+    21300012: GreenUnits_6
+    21300014: GreenUnits_7
+    21300016: GreenUnits_8
+    21300018: GreenUnits_9
+    21300020: GreenUnits_10
+    21300022: GreenUnits_11
+    21300024: GreenUnits_12
+    21300026: GreenUnits_13
+    21300028: GreenUnits_14
+    21300030: GreenUnits_15
+    21300032: GreenUnits_16
+    21300034: GreenUnits_17
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -26,20 +45,201 @@ TextureImporter:
     filterMode: -1
     aniso: -1
     mipBias: -1
-    wrapMode: -1
+    wrapMode: 1
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spritePixelsToUnits: 100
   alphaIsTransparency: 1
   textureType: 8
   buildTargetSettings: []
   spriteSheet:
-    sprites: []
+    sprites:
+    - name: GreenUnits_0
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 3
+        width: 13
+        height: 15
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GreenUnits_1
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 2
+        width: 16
+        height: 17
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GreenUnits_2
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 3
+        width: 13
+        height: 14
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GreenUnits_3
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 3
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GreenUnits_4
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 3
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GreenUnits_5
+      rect:
+        serializedVersion: 2
+        x: 93
+        y: 3
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GreenUnits_6
+      rect:
+        serializedVersion: 2
+        x: 109
+        y: 3
+        width: 16
+        height: 15
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GreenUnits_7
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 3
+        width: 14
+        height: 15
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GreenUnits_8
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 3
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GreenUnits_9
+      rect:
+        serializedVersion: 2
+        x: 166
+        y: 3
+        width: 14
+        height: 16
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GreenUnits_10
+      rect:
+        serializedVersion: 2
+        x: 182
+        y: 4
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GreenUnits_11
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 3
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GreenUnits_12
+      rect:
+        serializedVersion: 2
+        x: 219
+        y: 4
+        width: 15
+        height: 14
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GreenUnits_13
+      rect:
+        serializedVersion: 2
+        x: 236
+        y: 3
+        width: 16
+        height: 15
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GreenUnits_14
+      rect:
+        serializedVersion: 2
+        x: 254
+        y: 5
+        width: 16
+        height: 13
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GreenUnits_15
+      rect:
+        serializedVersion: 2
+        x: 274
+        y: 5
+        width: 13
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GreenUnits_16
+      rect:
+        serializedVersion: 2
+        x: 290
+        y: 7
+        width: 16
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GreenUnits_17
+      rect:
+        serializedVersion: 2
+        x: 308
+        y: 4
+        width: 16
+        height: 14
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 
