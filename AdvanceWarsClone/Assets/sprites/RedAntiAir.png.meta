@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 130d6a5a019759048ba3c40f8375cfe9
+guid: 7d2a3dcb6accf3241a8b3cea2168a5df
 TextureImporter:
   fileIDToRecycleName:
-    21300000: RedArtillery_0
-    21300002: RedArtillery_1
-    21300004: RedArtillery_2
+    21300000: AntiAir_0
+    21300002: AntiAir_1
+    21300004: AntiAir_2
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -46,33 +46,33 @@ TextureImporter:
   buildTargetSettings: []
   spriteSheet:
     sprites:
-    - name: RedArtillery_0
+    - name: AntiAir_0
       rect:
         serializedVersion: 2
         x: 2
-        y: 1
-        width: 15
-        height: 15
+        y: 2
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: RedArtillery_1
+    - name: AntiAir_1
       rect:
         serializedVersion: 2
-        x: 21
-        y: 1
-        width: 15
-        height: 15
+        x: 23
+        y: 2
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: RedArtillery_2
+    - name: AntiAir_2
       rect:
         serializedVersion: 2
-        x: 39
-        y: 1
-        width: 15
-        height: 14
+        x: 45
+        y: 2
+        width: 16
+        height: 15
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
