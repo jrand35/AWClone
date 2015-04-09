@@ -9,11 +9,15 @@ public class MenuStateListener : MonoBehaviour {
     public GameObject mapSelectObject;
     private bool titleScreenActive;
     private bool mapSelectActive;
+    private Vector3 activePos;
+    private Vector3 inactivePos;
 
     void Awake()
     {
         titleScreenActive = false;
         mapSelectActive = false;
+        activePos = new Vector3(0f, 0f, 0f);
+        inactivePos = new Vector3(0f, 0f, 0f);
     }
 
     void OnEnable()
