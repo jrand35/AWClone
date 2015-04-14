@@ -11,7 +11,7 @@ GameObject:
   - 212: {fileID: 21235516}
   - 95: {fileID: 9535516}
   m_Layer: 0
-  m_Name: RedAntiAir
+  m_Name: Red AntiAir
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

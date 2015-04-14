@@ -11,7 +11,7 @@ GameObject:
   - 212: {fileID: 21281266}
   - 95: {fileID: 9581266}
   m_Layer: 0
-  m_Name: RedScout
+  m_Name: Red Scout
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
