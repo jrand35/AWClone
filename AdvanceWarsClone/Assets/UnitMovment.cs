@@ -4,33 +4,33 @@ using System.Collections;
 public class UnitMovment : MonoBehaviour {
 
 
-    public GameObject unit;
-
-    private Transform unitTransform;
+    public float movespeed;
+   // private Transform unitTransform;
 
 
 	// Use this for initialization
 	void Start () {
 
-        unitTransform = unit.transform;
-	
+       // unitTransform = this.transform;
 	}
 	
 	// Update is called once per frame
 	void Update () {
 
-        unitTransform = unit.transform;
+      //  unitTransform = this.transform;
 
+        if (Input.GetKeyDown (KeyCode.LeftArrow))
+        {
+            moveUnit();
+        }//end while
 
-	
-	}
-
-    private void moveUnit(int distance)
+	} //end update
+    void moveUnit()
     {
-        unit.
+        this.transform.position.x = movespeed;
+        return;
     }
 
 
-
-
 }
+
