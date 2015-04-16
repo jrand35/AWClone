@@ -3,6 +3,7 @@
 --- !u!78 &1
 TagManager:
   tags:
+  - Terrain
   - 
   Builtin Layer 0: Default
   Builtin Layer 1: TransparentFX
@@ -12,8 +13,13 @@ TagManager:
   Builtin Layer 5: UI
   Builtin Layer 6: 
   Builtin Layer 7: 
+<<<<<<< HEAD
   User Layer 8: Units
   User Layer 9: Land
+=======
+  User Layer 8: terrain
+  User Layer 9: 
+>>>>>>> Testing-branch
   User Layer 10: 
   User Layer 11: 
   User Layer 12: 
@@ -41,6 +47,7 @@ TagManager:
     userID: 0
     uniqueID: 0
     locked: 0
+<<<<<<< HEAD
   - name: land
     userID: 1
     uniqueID: 2095924243
@@ -48,4 +55,9 @@ TagManager:
   - name: units
     userID: 2
     uniqueID: 1908791627
+=======
+  - name: terrain
+    userID: 1
+    uniqueID: 3389154881
+>>>>>>> Testing-branch
     locked: 0

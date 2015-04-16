@@ -56,8 +56,13 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\MenuStateController.cs" />
     <Compile Include="Assets\Scripts\MenuStateListener.cs" />
+<<<<<<< HEAD
     <Compile Include="Assets\Scripts\UnitStateController.cs" />
     <Compile Include="Assets\Scripts\UnitStateListener.cs" />
+    <Compile Include="Assets\Scripts\UnitStatus.cs" />
+=======
+    <Compile Include="Assets\Scripts\UnitMovment.cs" />
+>>>>>>> Testing-branch
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\SyntaxTree\UnityVS\2013\UnityVS.CSharp.targets" />
 </Project>
