@@ -15,12 +15,17 @@ public class UnitStateListener : MonoBehaviour
 
     void OnEnable()
     {
-        UnitStateController.onStateChange += onStateChange;
+        UnitStateController.unitStateChangeEvent += OnUnitStateChange;
     }
 
     void OnDisable()
     {
-        UnitStateController.onStateChange -= onStateChange;
+        UnitStateController.unitStateChangeEvent -= OnUnitStateChange;
+    }
+
+    void OnMouseDown()
+    {
+        OnUnitStateChange(UnitStateController.unitStates.selected, gameObject);
     }
 
     void LateUpdate()
@@ -52,10 +57,17 @@ public class UnitStateListener : MonoBehaviour
         }
     }
 
-    void onStateChange(UnitStateController.unitStates newState, GameObject caller)
+    void OnUnitStateChange(UnitStateController.unitStates newState, GameObject caller)
     {
+        Debug.Log(caller.ToString() + " is Entering OnUnitStateChange");
         if (newState == currentState)
             return;
+
+        //TODO: Check that a valid state transition is requested
+        // if not return;
+
+        previousState = currentState;
+ 
 
         //When the state is first changed
         switch (newState)
@@ -74,7 +86,10 @@ public class UnitStateListener : MonoBehaviour
 
             case UnitStateController.unitStates.selected:
                 caller.transform.position = new Vector3(-1000f, -1000f, -1000f);
-                onStateChange(UnitStateController.unitStates.idle, gameObject);
+                //currentState = UnitStateController.unitStates.idle;
+
+  
+                //onStateChange(UnitStateController.unitStates.idle, gameObject);
                 //anim.SetBool("Selected", true);
                 break;
 
@@ -86,7 +101,5 @@ public class UnitStateListener : MonoBehaviour
                 //anim.SetBool("Attacking", true);
                 break;
         }
-        previousState = currentState;
-        currentState = newState;
     }
 }
