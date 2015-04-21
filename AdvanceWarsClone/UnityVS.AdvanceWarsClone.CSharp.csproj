@@ -56,6 +56,7 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\MenuStateController.cs" />
     <Compile Include="Assets\Scripts\MenuStateListener.cs" />
+    <Compile Include="Assets\Scripts\UnitMovment.cs" />
     <Compile Include="Assets\Scripts\UnitStateController.cs" />
     <Compile Include="Assets\Scripts\UnitStateListener.cs" />
     <Compile Include="Assets\Scripts\UnitStatus.cs" />

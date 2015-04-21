@@ -6,7 +6,7 @@ public class UnitStatus : MonoBehaviour {
     public int Attack;
     public int Defense;
     public int Range;
-    public gameObject[] EnemyUnit;
+    public GameObject[] EnemyUnit;
 	// Use this for initialization
 	void Start () {
 	

@@ -14,13 +14,12 @@ public class UnitStateController : MonoBehaviour
         attacking
     }
 
-    public delegate void UnitSateHandler(UnitStateController.unitStates newState, GameObject caller);
-    public static event UnitSateHandler onStateChange;
+    public delegate void UnitStateEvent(UnitStateController.unitStates newState, GameObject caller);
+    public static event UnitStateEvent unitStateChangeEvent;
 
-    void OnMouseDown()
+    void Update()
     {
-        Debug.Log("OnMouseDown");
-        onStateChange(UnitStateController.unitStates.selected, gameObject);
+
     }
 
     //Possibly use for changing states
