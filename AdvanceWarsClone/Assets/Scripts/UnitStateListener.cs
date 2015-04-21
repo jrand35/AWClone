@@ -23,11 +23,6 @@ public class UnitStateListener : MonoBehaviour
         UnitStateController.unitStateChangeEvent -= OnUnitStateChange;
     }
 
-    void OnMouseDown()
-    {
-        OnUnitStateChange(UnitStateController.unitStates.selected, gameObject);
-    }
-
     void LateUpdate()
     {
         onStateCycle();
@@ -59,8 +54,7 @@ public class UnitStateListener : MonoBehaviour
 
     void OnUnitStateChange(UnitStateController.unitStates newState, GameObject caller)
     {
-        Debug.Log(caller.ToString() + " is Entering OnUnitStateChange");
-        if (newState == currentState)
+        if (newState == currentState || caller != gameObject)
             return;
 
         //TODO: Check that a valid state transition is requested
@@ -85,10 +79,6 @@ public class UnitStateListener : MonoBehaviour
                 break;
 
             case UnitStateController.unitStates.selected:
-                caller.transform.position = new Vector3(-1000f, -1000f, -1000f);
-                //currentState = UnitStateController.unitStates.idle;
-
-  
                 //onStateChange(UnitStateController.unitStates.idle, gameObject);
                 //anim.SetBool("Selected", true);
                 break;

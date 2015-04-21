@@ -17,9 +17,9 @@ public class UnitStateController : MonoBehaviour
     public delegate void UnitStateEvent(UnitStateController.unitStates newState, GameObject caller);
     public static event UnitStateEvent unitStateChangeEvent;
 
-    void Update()
+    void OnMouseDown()
     {
-
+         unitStateChangeEvent(UnitStateController.unitStates.selected, gameObject);
     }
 
     //Possibly use for changing states

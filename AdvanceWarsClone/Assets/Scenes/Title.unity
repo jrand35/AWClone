@@ -99,7 +99,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 317351303}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0de14ca9b49ca484b92cb55ee5d6f8b6, type: 3}
+  m_Script: {fileID: 11500000, guid: bf4351f905d51d84eabf267ccb85c99c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &317351305
@@ -110,7 +110,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 317351303}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 68bcf5bd47af73b44a5ed77b987131bb, type: 3}
+  m_Script: {fileID: 11500000, guid: f5168fa2bb7b57141be0740e0b5be576, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   titleScreenObject: {fileID: 1186888452}
@@ -266,6 +266,72 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 3
+--- !u!1 &990016865
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 224: {fileID: 990016866}
+  - 222: {fileID: 990016868}
+  - 114: {fileID: 990016867}
+  m_Layer: 5
+  m_Name: Text
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &990016866
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 990016865}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2046850135}
+  m_RootOrder: 0
+  m_AnchorMin: {x: .5, y: .5}
+  m_AnchorMax: {x: .5, y: .5}
+  m_AnchoredPosition: {x: 0, y: -81.9000015}
+  m_SizeDelta: {x: 160, y: 30}
+  m_Pivot: {x: .5, y: .5}
+--- !u!114 &990016867
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 990016865}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: .1953125, g: .1953125, b: .1953125, a: 1}
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 14
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 10
+    m_MaxSize: 40
+    m_Alignment: 1
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: New Text
+--- !u!222 &990016868
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 990016865}
 --- !u!1 &1098904724
 GameObject:
   m_ObjectHideFlags: 0
@@ -516,7 +582,7 @@ GameObject:
   m_Component:
   - 224: {fileID: 1631745325}
   m_Layer: 5
-  m_Name: Map select screen
+  m_Name: Main Screen
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -531,7 +597,8 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 2046850135}
   m_Father: {fileID: 1098904725}
   m_RootOrder: 1
   m_AnchorMin: {x: .5, y: .5}
@@ -551,8 +618,9 @@ GameObject:
   - 114: {fileID: 1696362250}
   - 114: {fileID: 1696362249}
   - 61: {fileID: 1696362253}
+  - 114: {fileID: 1696362254}
   m_Layer: 0
-  m_Name: Red Mech_0
+  m_Name: Red Mech 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -566,7 +634,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1696362248}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3d9f1c2117b9288429f5306516baa399, type: 3}
+  m_Script: {fileID: 11500000, guid: 17ddd0cf36b4fb94387c498c6aad42c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &1696362250
@@ -577,7 +645,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1696362248}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7052dc8053920494d853dcf7d0ec41ea, type: 3}
+  m_Script: {fileID: 11500000, guid: e95beb98ac611ae49b12af6ddaefe9e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!212 &1696362251
@@ -609,7 +677,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1696362248}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.37024486, y: -.439129114, z: 0}
+  m_LocalPosition: {x: 1.32799995, y: -.43900001, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -625,6 +693,22 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_Size: {x: .159999996, y: .159999996}
   m_Center: {x: 0, y: 0}
+--- !u!114 &1696362254
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1696362248}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb800753454ced48a70b633adcc48a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Movement: 4
+  Attack: 4
+  Defense: 4
+  Range: 4
+  EnemyUnit: []
 --- !u!1 &1794120503
 GameObject:
   m_ObjectHideFlags: 0
@@ -637,8 +721,9 @@ GameObject:
   - 114: {fileID: 1794120508}
   - 114: {fileID: 1794120507}
   - 61: {fileID: 1794120506}
+  - 114: {fileID: 1794120509}
   m_Layer: 0
-  m_Name: Red Mech_0
+  m_Name: Red Mech 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -673,7 +758,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1794120503}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.14627945, y: -.292929471, z: 0}
+  m_LocalPosition: {x: -.88499999, y: .550999999, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -697,7 +782,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1794120503}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3d9f1c2117b9288429f5306516baa399, type: 3}
+  m_Script: {fileID: 11500000, guid: 17ddd0cf36b4fb94387c498c6aad42c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &1794120508
@@ -708,9 +793,70 @@ MonoBehaviour:
   m_GameObject: {fileID: 1794120503}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7052dc8053920494d853dcf7d0ec41ea, type: 3}
+  m_Script: {fileID: 11500000, guid: e95beb98ac611ae49b12af6ddaefe9e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1794120509
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1794120503}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb800753454ced48a70b633adcc48a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Movement: 1
+  Attack: 2
+  Defense: 3
+  Range: 5
+  EnemyUnit: []
+--- !u!1 &2046850133
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 224: {fileID: 2046850135}
+  - 114: {fileID: 2046850134}
+  m_Layer: 5
+  m_Name: HUD
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2046850134
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2046850133}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ebd7150056c373e439453a4562aab64c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!224 &2046850135
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2046850133}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 990016866}
+  m_Father: {fileID: 1631745325}
+  m_RootOrder: 0
+  m_AnchorMin: {x: .5, y: .5}
+  m_AnchorMax: {x: .5, y: .5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: .5, y: .5}
 --- !u!1 &2064312142
 GameObject:
   m_ObjectHideFlags: 0
