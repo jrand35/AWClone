@@ -18,3 +18,14 @@ C:\Users\jraymond\Documents\GitHub\AWClone\AdvanceWarsClone\Temp\UnityVS_bin\Deb
 C:\Users\jraymond\Documents\GitHub\AWClone\AdvanceWarsClone\obj\Debug\UnityVS.AdvanceWarsClone.CSharp.csprojResolveAssemblyReference.cache
 C:\Users\jraymond\Documents\GitHub\AWClone\AdvanceWarsClone\obj\Debug\Assembly-CSharp.dll
 C:\Users\jraymond\Documents\GitHub\AWClone\AdvanceWarsClone\obj\Debug\Assembly-CSharp.pdb
+K:\AWClone\AdvanceWarsClone\Temp\UnityVS_bin\Debug\Assembly-CSharp.dll
+K:\AWClone\AdvanceWarsClone\Temp\UnityVS_bin\Debug\Assembly-CSharp.pdb
+K:\AWClone\AdvanceWarsClone\Temp\UnityVS_bin\Debug\UnityEditor.dll
+K:\AWClone\AdvanceWarsClone\Temp\UnityVS_bin\Debug\UnityEngine.dll
+K:\AWClone\AdvanceWarsClone\Temp\UnityVS_bin\Debug\UnityEngine.UI.dll
+K:\AWClone\AdvanceWarsClone\Temp\UnityVS_bin\Debug\UnityEngine.xml
+K:\AWClone\AdvanceWarsClone\Temp\UnityVS_bin\Debug\UnityEditor.xml
+K:\AWClone\AdvanceWarsClone\Temp\UnityVS_bin\Debug\UnityEngine.UI.xml
+K:\AWClone\AdvanceWarsClone\obj\Debug\UnityVS.AdvanceWarsClone.CSharp.csprojResolveAssemblyReference.cache
+K:\AWClone\AdvanceWarsClone\obj\Debug\Assembly-CSharp.dll
+K:\AWClone\AdvanceWarsClone\obj\Debug\Assembly-CSharp.pdb
