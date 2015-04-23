@@ -24,6 +24,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 471568}
+  - 114: {fileID: 11451850}
   m_Layer: 0
   m_Name: Blue City
   m_TagString: Untagged
@@ -85,6 +86,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 471568}
   m_RootOrder: 0
+--- !u!114 &11451850
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 171568}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6633e11a32382fa45bb99593cc01b188, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnpoint: {fileID: 171566}
+  infantry: {fileID: 159330, guid: ac2fd3117167b1441aae80edad35508c, type: 2}
+  mech: {fileID: 111760, guid: f7f431d7aded32b448c9bafae0b45546, type: 2}
+  recon: {fileID: 100002, guid: cb94cb6193e3a954d85e148d2744bf13, type: 2}
 --- !u!212 &21271566
 SpriteRenderer:
   m_ObjectHideFlags: 1
