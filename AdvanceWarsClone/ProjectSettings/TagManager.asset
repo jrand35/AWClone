@@ -3,6 +3,8 @@
 --- !u!78 &1
 TagManager:
   tags:
+  - red
+  - blue
   - 
   Builtin Layer 0: Default
   Builtin Layer 1: TransparentFX
@@ -40,4 +42,12 @@ TagManager:
   - name: Default
     userID: 0
     uniqueID: 0
+    locked: 0
+  - name: Land
+    userID: 1
+    uniqueID: 3563302645
+    locked: 0
+  - name: Units
+    userID: 2
+    uniqueID: 133804767
     locked: 0
