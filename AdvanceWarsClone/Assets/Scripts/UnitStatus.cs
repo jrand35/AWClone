@@ -18,16 +18,16 @@ public class UnitStatus : MonoBehaviour {
 	// Update is called once per frame
 	void Update () 
     {
-        if (ClickedOn)
+        /*if (ClickedOn)
         {
             Targeting();
         }
         Vector3 newposition = transform.position;
         newposition.x = gameObject.transform.position.x;
         newposition.x = Mathf.Clamp(newposition.x, Range, Range * -1);
-        transform.position = newposition;
+        transform.position = newposition;*/
 	}
-    void OnMouseDown()
+    void OnMouseClick()
     {
         ClickedOn = true;
     }

@@ -4,35 +4,51 @@ using System.Collections;
 
 public class HUDListener : MonoBehaviour
 {
+    public Image HUDImage;
+    public Text movementText;
+    public Text attackText;
+    public Text defenseText;
+    public Text rangeText;
 
-    private Text unitText;
+    void Start()
+    {
+
+    }
 
     void OnEnable()
     {
-        UnitStateController.unitStateChangeEvent += OnUnitStateChange;
+        UnitState.unitStateChangeEvent += OnUnitStateChange;
     }
 
     void OnDisable()
     {
-        UnitStateController.unitStateChangeEvent -= OnUnitStateChange;
+        UnitState.unitStateChangeEvent -= OnUnitStateChange;
     }
 
-    void OnUnitStateChange(UnitStateController.unitStates newState, GameObject obj)
+    void OnUnitStateChange(UnitState.unitStates newState, GameObject obj)
     {
-        if (obj != null)
+        switch (newState)
         {
-            UnitStatus unitStatus = obj.GetComponent<UnitStatus>();
-            unitText.text = "Movement: " + unitStatus.Movement + "\n" +
-                "Attack: " + unitStatus.Attack + "\n" +
-                "Defense: " + unitStatus.Defense + "\n" +
-                "Range: " + unitStatus.Range;
-        }
-    }
+            case UnitState.unitStates.selected:
+                if (obj != null)
+                {
+                    UnitStatus unitStatus = obj.GetComponent<UnitStatus>();
+                    movementText.text = "Movement: " + unitStatus.Movement;
+                    attackText.text = "Attack: " + unitStatus.Attack;
+                    defenseText.text = "Defense: " + unitStatus.Defense;
+                    rangeText.text = "Range: " + unitStatus.Range;
+                    HUDImage.enabled = true;
+                }
+                break;
 
-    // Use this for initialization
-    void Start()
-    {
-        unitText = GetComponentInChildren<Text>();
+            case UnitState.unitStates.idle:
+                movementText.text = "";
+                attackText.text = "";
+                defenseText.text = "";
+                rangeText.text = "";
+                HUDImage.enabled = false;
+                break;
+        }
     }
 
     // Update is called once per frame
