@@ -58,8 +58,10 @@
     <Compile Include="Assets\Scripts\MenuStateController.cs" />
     <Compile Include="Assets\Scripts\MenuStateListener.cs" />
     <Compile Include="Assets\Scripts\UnitMovment.cs" />
+    <Compile Include="Assets\Scripts\UnitRange.cs" />
     <Compile Include="Assets\Scripts\UnitState.cs" />
     <Compile Include="Assets\Scripts\UnitStatus.cs" />
+    <Compile Include="Assets\Scripts\spawnScript.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\SyntaxTree\UnityVS\2013\UnityVS.CSharp.targets" />
 </Project>
