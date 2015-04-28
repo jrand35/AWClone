@@ -297,8 +297,8 @@ RectTransform:
   m_RootOrder: 0
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
-  m_AnchoredPosition: {x: 0, y: -81.9000015}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: 0, y: -133}
+  m_SizeDelta: {x: 160, y: 160}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &990016867
 MonoBehaviour:
@@ -616,27 +616,15 @@ GameObject:
   - 4: {fileID: 1696362252}
   - 212: {fileID: 1696362251}
   - 114: {fileID: 1696362250}
-  - 114: {fileID: 1696362249}
   - 61: {fileID: 1696362253}
   - 114: {fileID: 1696362254}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Red Mech 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1696362249
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1696362248}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 17ddd0cf36b4fb94387c498c6aad42c2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1696362250
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -648,6 +636,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e95beb98ac611ae49b12af6ddaefe9e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Unit:
+    serializedVersion: 2
+    m_Bits: 256
 --- !u!212 &1696362251
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -691,7 +682,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Size: {x: .159999996, y: .159999996}
+  m_Size: {x: 1, y: 1}
   m_Center: {x: 0, y: 0}
 --- !u!114 &1696362254
 MonoBehaviour:
@@ -708,7 +699,6 @@ MonoBehaviour:
   Attack: 4
   Defense: 4
   Range: 4
-  EnemyUnit: []
 --- !u!1 &1794120503
 GameObject:
   m_ObjectHideFlags: 0
@@ -719,10 +709,9 @@ GameObject:
   - 4: {fileID: 1794120505}
   - 212: {fileID: 1794120504}
   - 114: {fileID: 1794120508}
-  - 114: {fileID: 1794120507}
   - 61: {fileID: 1794120506}
   - 114: {fileID: 1794120509}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Red Mech 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -772,19 +761,8 @@ BoxCollider2D:
   m_Enabled: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Size: {x: .159999996, y: .159999996}
+  m_Size: {x: 1, y: 1}
   m_Center: {x: 0, y: 0}
---- !u!114 &1794120507
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1794120503}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 17ddd0cf36b4fb94387c498c6aad42c2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1794120508
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -796,6 +774,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e95beb98ac611ae49b12af6ddaefe9e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Unit:
+    serializedVersion: 2
+    m_Bits: 256
 --- !u!114 &1794120509
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -811,7 +792,6 @@ MonoBehaviour:
   Attack: 2
   Defense: 3
   Range: 5
-  EnemyUnit: []
 --- !u!1 &2046850133
 GameObject:
   m_ObjectHideFlags: 0

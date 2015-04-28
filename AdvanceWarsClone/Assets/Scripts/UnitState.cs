@@ -5,6 +5,7 @@ public class UnitState : MonoBehaviour
 {
     public delegate void unitStateHandler(unitStates newState, GameObject caller);
     public static event unitStateHandler unitStateChangeEvent;
+    public LayerMask Unit;
     private Animator anim;
     private unitStates currentState = unitStates.idle;
     private unitStates previousState = unitStates.idle;
@@ -26,12 +27,33 @@ public class UnitState : MonoBehaviour
 
     void OnEnable()
     {
-        //UnitStateController.unitStateChangeEvent += OnUnitStateChange;
+        
     }
 
     void OnDisable()
     {
-        //UnitStateController.unitStateChangeEvent -= OnUnitStateChange;
+        
+    }
+
+    void Update()
+    {
+        Vector3 mouseWorldPoint = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        Vector2 mousePos = new Vector2(mouseWorldPoint.x, mouseWorldPoint.y);
+        if (Input.GetMouseButtonDown(0))
+        {
+            if (Physics2D.OverlapPoint(mousePos, Unit))
+            {
+                bool deleg;
+                if (Physics2D.OverlapPoint(mousePos) == collider2D)
+                    OnUnitStateChange(unitStates.selected, gameObject, true);
+                else
+                    OnUnitStateChange(unitStates.idle, gameObject, false);
+            }
+            else if (!Physics2D.OverlapPoint(mousePos, Unit))
+            {
+                OnUnitStateChange(unitStates.idle, gameObject, true);
+            }
+        }
     }
 
     void LateUpdate()
@@ -41,12 +63,13 @@ public class UnitState : MonoBehaviour
 
     void OnMouseEnter()
     {
-        OnUnitStateChange(unitStates.selected, gameObject);
+        
+        
     }
 
     void OnMouseExit()
     {
-        OnUnitStateChange(unitStates.idle, gameObject);
+        
     }
 
     void onStateCycle()
@@ -73,12 +96,14 @@ public class UnitState : MonoBehaviour
         }
     }
 
-    void OnUnitStateChange(unitStates newState, GameObject caller)
+    void OnUnitStateChange(unitStates newState, GameObject caller, bool delegEvent)
     {
-        if (newState == currentState || caller != gameObject)
-            return;
+        //Does return if newState == currentState
+        //if (caller != gameObject)
+        //    return;
 
-        unitStateChangeEvent(newState, caller);
+        if (delegEvent)
+            unitStateChangeEvent(newState, caller);
 
         //TODO: Check that a valid state transition is requested
         // if not return;
@@ -91,7 +116,7 @@ public class UnitState : MonoBehaviour
         switch (newState)
         {
             case unitStates.idle:
-                //anim.SetBool("Idle", true);
+                Debug.Log(gameObject.name);
                 break;
 
             case unitStates.inactive:
@@ -103,8 +128,6 @@ public class UnitState : MonoBehaviour
                 break;
 
             case unitStates.selected:
-                //onStateChange(UnitStateController.unitStates.idle, gameObject);
-                //anim.SetBool("Selected", true);
                 break;
 
             case unitStates.moving:

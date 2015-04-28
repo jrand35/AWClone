@@ -9,23 +9,34 @@ public class HUDListener : MonoBehaviour
 
     void OnEnable()
     {
-        UnitStateController.unitStateChangeEvent += OnUnitStateChange;
+        UnitState.unitStateChangeEvent += OnUnitStateChange;
     }
 
     void OnDisable()
     {
-        UnitStateController.unitStateChangeEvent -= OnUnitStateChange;
+        UnitState.unitStateChangeEvent -= OnUnitStateChange;
     }
 
-    void OnUnitStateChange(UnitStateController.unitStates newState, GameObject obj)
+    void OnUnitStateChange(UnitState.unitStates newState, GameObject obj)
     {
-        if (obj != null)
+        if (newState == UnitState.unitStates.selected)
+        {
+            if (obj != null)
+            {
+                UnitStatus unitStatus = obj.GetComponent<UnitStatus>();
+                unitText.text = "Movement: " + unitStatus.Movement + "\n" +
+                    "Attack: " + unitStatus.Attack + "\n" +
+                    "Defense: " + unitStatus.Defense + "\n" +
+                    "Range: " + unitStatus.Range;
+            }
+        }
+        else if (newState == UnitState.unitStates.idle)
         {
             UnitStatus unitStatus = obj.GetComponent<UnitStatus>();
-            unitText.text = "Movement: " + unitStatus.Movement + "\n" +
-                "Attack: " + unitStatus.Attack + "\n" +
-                "Defense: " + unitStatus.Defense + "\n" +
-                "Range: " + unitStatus.Range;
+            unitText.text = "Movement: " + "\n" +
+                "Attack: " + "\n" +
+                "Defense: " + "\n" +
+                "Range: ";
         }
     }
 
