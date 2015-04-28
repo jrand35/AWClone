@@ -87,7 +87,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 110278}
   m_Enabled: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Size: {x: 1, y: 1}
   m_Center: {x: 0, y: 0}
 --- !u!61 &6123432
@@ -98,7 +98,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 123470}
   m_Enabled: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Size: {x: 1, y: 1}
   m_Center: {x: 2, y: 0}
 --- !u!61 &6123434
@@ -109,7 +109,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 123470}
   m_Enabled: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Size: {x: 1, y: 1}
   m_Center: {x: -2, y: 0}
 --- !u!61 &6123436
@@ -120,7 +120,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 123470}
   m_Enabled: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Size: {x: 1, y: 1}
   m_Center: {x: 3, y: 0}
 --- !u!61 &6123438
@@ -131,7 +131,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 123470}
   m_Enabled: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Size: {x: 1, y: 1}
   m_Center: {x: -3, y: 0}
 --- !u!61 &6123440
@@ -142,7 +142,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 123470}
   m_Enabled: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Size: {x: 1, y: 1}
   m_Center: {x: -1, y: 1}
 --- !u!61 &6123442
@@ -153,7 +153,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 123470}
   m_Enabled: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Size: {x: 1, y: 1}
   m_Center: {x: 1, y: 1}
 --- !u!61 &6123444
@@ -164,7 +164,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 123470}
   m_Enabled: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Size: {x: 1, y: 1}
   m_Center: {x: 0, y: -2}
 --- !u!61 &6123446
@@ -175,7 +175,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 123470}
   m_Enabled: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Size: {x: 1, y: 1}
   m_Center: {x: 0, y: 2}
 --- !u!61 &6123448
@@ -186,7 +186,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 123470}
   m_Enabled: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Size: {x: 1, y: 1}
   m_Center: {x: 1, y: -1}
 --- !u!61 &6123450
@@ -197,7 +197,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 123470}
   m_Enabled: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Size: {x: 1, y: 1}
   m_Center: {x: -1, y: -1}
 --- !u!61 &6123452
@@ -208,7 +208,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 123470}
   m_Enabled: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Size: {x: 1, y: 1}
   m_Center: {x: 0, y: 3}
 --- !u!61 &6123454
@@ -219,7 +219,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 123470}
   m_Enabled: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Size: {x: 1, y: 1}
   m_Center: {x: 0, y: -3}
 --- !u!61 &6123456
@@ -230,7 +230,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 123470}
   m_Enabled: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Size: {x: 1, y: 1}
   m_Center: {x: -2, y: 1}
 --- !u!61 &6123458
@@ -241,7 +241,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 123470}
   m_Enabled: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Size: {x: 1, y: 1}
   m_Center: {x: -1, y: 2}
 --- !u!61 &6123460
@@ -252,7 +252,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 123470}
   m_Enabled: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Size: {x: 1, y: 1}
   m_Center: {x: -2, y: -1}
 --- !u!61 &6123462
@@ -263,7 +263,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 123470}
   m_Enabled: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Size: {x: 1, y: 1}
   m_Center: {x: -1, y: -2}
 --- !u!61 &6123464
@@ -274,7 +274,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 123470}
   m_Enabled: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Size: {x: 1, y: 1}
   m_Center: {x: 1, y: 2}
 --- !u!61 &6123466
@@ -285,7 +285,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 123470}
   m_Enabled: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Size: {x: 1, y: 1}
   m_Center: {x: 1, y: -2}
 --- !u!61 &6123468
@@ -296,7 +296,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 123470}
   m_Enabled: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Size: {x: 1, y: 1}
   m_Center: {x: 2, y: 1}
 --- !u!61 &6123470
@@ -307,7 +307,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 123470}
   m_Enabled: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Size: {x: 1, y: 1}
   m_Center: {x: 2, y: -1}
 --- !u!82 &8234998

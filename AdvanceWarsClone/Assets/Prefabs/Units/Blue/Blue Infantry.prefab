@@ -30,9 +30,10 @@ GameObject:
   - 212: {fileID: 21259330}
   - 95: {fileID: 9559330}
   - 82: {fileID: 8253668}
+  - 61: {fileID: 6156804}
   m_Layer: 0
   m_Name: Blue Infantry
-  m_TagString: Untagged
+  m_TagString: blue
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -56,7 +57,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 159330}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.54179382, y: -.184485048, z: 0}
+  m_LocalPosition: {x: -.567318559, y: -.320127487, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 430890}
@@ -106,6 +107,17 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_Size: {x: 1, y: 1}
   m_Center: {x: 1, y: 0}
+--- !u!61 &6156804
+BoxCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 159330}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Size: {x: 1, y: 1}
+  m_Center: {x: 0, y: 0}
 --- !u!82 &8253668
 AudioSource:
   m_ObjectHideFlags: 1
