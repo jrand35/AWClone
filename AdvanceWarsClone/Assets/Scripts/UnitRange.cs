@@ -4,7 +4,7 @@ using System.Collections;
 public class UnitRange : MonoBehaviour {
     public GameObject attachedUnit;
     private string RedOrBlue;
-    public UnitStateListener unitScript;
+    public UnitStatus unitScript;
 	// Use this for initialization
 	void Start () 
     {
@@ -21,14 +21,14 @@ public class UnitRange : MonoBehaviour {
     {
         if (col.gameObject.tag != RedOrBlue)
         {
-            unitScript.canAttack = false;
+            unitScript.CanAttack(false);
         }
     }
     void OnTriggerEnter2D(Collision2D col)
     {
         if (col.gameObject.tag != RedOrBlue)
         {
-            unitScript.canAttack = true;
+            unitScript.CanAttack(true);
         }
     }
 	// Update is called once per frame

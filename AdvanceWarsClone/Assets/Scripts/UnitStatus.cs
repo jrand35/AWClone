@@ -6,46 +6,19 @@ public class UnitStatus : MonoBehaviour {
     public int Attack;
     public int Defense;
     public int Range;
-    public GameObject[] EnemyUnit;
-    private float maxRange;
-    private bool ClickedOn = false;
-    private Ray rayToMouse;///< the ray to the mouse
+    private bool canAttack;
 	// Use this for initialization
 	void Start () {
-        maxRange = Range * Range;
+        canAttack = false;
 	}
 	
 	// Update is called once per frame
 	void Update () 
     {
-        /*if (ClickedOn)
-        {
-            Targeting();
-        }
-        Vector3 newposition = transform.position;
-        newposition.x = gameObject.transform.position.x;
-        newposition.x = Mathf.Clamp(newposition.x, Range, Range * -1);
-        transform.position = newposition;*/
+      
 	}
-    void OnMouseClick()
+    public void CanAttack(bool c)
     {
-        ClickedOn = true;
+        canAttack = c;
     }
-    void Targeting()
-    {
-        Vector3 mouseWorldPoint = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        Vector2 catapultToMouse = mouseWorldPoint - gameObject.transform.position;
-
-        if (catapultToMouse.sqrMagnitude > maxRange)
-        {
-            rayToMouse.direction = catapultToMouse;
-            mouseWorldPoint = rayToMouse.GetPoint(Range);
-        }
-
-        mouseWorldPoint.z = 0f;
-        transform.position = mouseWorldPoint;
-    }
-
-
-
 }
