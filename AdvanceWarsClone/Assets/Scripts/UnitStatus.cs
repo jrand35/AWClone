@@ -41,6 +41,7 @@ public class UnitStatus : MonoBehaviour {
         if (col.gameObject.tag == EnemyColor)
         {
             Enemies.Remove(col.gameObject);
+            Debug.Log(Enemies.Count);
 			canAttack = false;
         }
     }
@@ -49,12 +50,17 @@ public class UnitStatus : MonoBehaviour {
         if (col.gameObject.tag == EnemyColor)
         {
             Enemies.Add(col.gameObject);
+            Debug.Log(Enemies.Count);
 			canAttack = true;
         }
     }
 
 	public void AttackHim(int TotalAttack){
-		TotalAttack = (Health / 2) * Attack;
+		TotalAttack = Mathf.RoundToInt((Health / 2) * Attack);
 	}
-    
+
+    public void Attacked(int TotalAttack)
+    {
+        Health = Health - (TotalAttack - Defense);
+    }
 }

@@ -5,6 +5,8 @@ public class UnitState : MonoBehaviour
 {
     public delegate void unitStateHandler(unitStates newState, GameObject caller);
     public static event unitStateHandler unitStateChangeEvent;
+    private GameObject FirstPlayer;///< this is the current player who is moving and attacking
+    private GameObject SecondPlayer;///< this is the player that the FirstPlayer is attacking
     public LayerMask Unit;
     private Animator anim;
     private unitStates currentState = unitStates.idle;
@@ -138,5 +140,10 @@ public class UnitState : MonoBehaviour
                 //anim.SetBool("Attacking", true);
                 break;
         }
+    }
+
+    void Attack()
+    {
+        
     }
 }
