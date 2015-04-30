@@ -56,6 +56,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 435904}
+  - 114: {fileID: 11450422}
   m_Layer: 0
   m_Name: City
   m_TagString: Untagged
@@ -143,6 +144,23 @@ Transform:
   m_Children: []
   m_Father: {fileID: 435904}
   m_RootOrder: 3
+--- !u!114 &11450422
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 135904}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4363e27f39479e044b8dbe5d86819eaa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  occupied: 0
+  cityHealth: 10
+  city: {fileID: 135898}
+  redcity: {fileID: 135902}
+  bluecity: {fileID: 135900}
+  healAmount: 0
 --- !u!212 &21235900
 SpriteRenderer:
   m_ObjectHideFlags: 1
