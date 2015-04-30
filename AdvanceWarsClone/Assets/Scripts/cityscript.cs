@@ -4,9 +4,13 @@ using System.Collections;
 public class cityscript : MonoBehaviour {
 
     private GameObject unit;
-    private bool occupied;
+    public bool occupied;
+    public int cityHealth = 10;
+    private string citytag;
 
     public GameObject city;
+    public GameObject redcity;
+    public GameObject bluecity;
     public int healAmount;
 
 
@@ -19,6 +23,7 @@ public class cityscript : MonoBehaviour {
 	
     void OnTriggerEnter2D(Collider2D call)
     {
+        //Debug.Log("enter trigger");
         unit = call.gameObject;
         occupied = true;
     }
@@ -27,18 +32,22 @@ public class cityscript : MonoBehaviour {
     {
         unit = null;
         occupied = false;
+        cityHealth = 10;
     }
 
 	// Update is called once per frame
 	void Update () {
 
+        if (occupied == true)
+        {
+            if (unit.tag == gameObject.tag)
+                heal();
+
+            else if (occupied == true)
+                capture();
+        }
+
         
-
-        if (unit.tag == this.tag && occupied == true)
-            heal();
-
-        else if (occupied == true)
-            capture();
 	
 	}
 
@@ -55,9 +64,27 @@ public class cityscript : MonoBehaviour {
 
     private void capture()
     {
-
-
-
+        if (unit.tag != citytag)
+        {
+            this.cityHealth -= 5;
+            if(cityHealth <= 0)
+            {
+                if(unit.tag == "red")
+                {
+                    this.redcity.renderer.enabled = true;
+                    this.city.renderer.enabled = false;
+                    this.bluecity.renderer.enabled = false;
+                }
+                else
+                {
+                    this.bluecity.renderer.enabled = true;
+                    this.city.renderer.enabled = false;
+                    this.redcity.renderer.enabled = false;
+                }
+                cityHealth = 10;
+                citytag = unit.tag;
+            }
+        }
     }
 
 

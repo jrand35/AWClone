@@ -6,6 +6,10 @@ TagManager:
   - red
   - blue
   - 
+  - Water
+  - Grass
+  - Road
+  - 
   Builtin Layer 0: Default
   Builtin Layer 1: TransparentFX
   Builtin Layer 2: Ignore Raycast
@@ -50,4 +54,8 @@ TagManager:
   - name: Units
     userID: 2
     uniqueID: 133804767
+    locked: 0
+  - name: New Layer 3
+    userID: 3
+    uniqueID: 3103132451
     locked: 0
