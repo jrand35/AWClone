@@ -12,6 +12,7 @@ GameObject:
   - 61: {fileID: 6130888}
   - 61: {fileID: 6130886}
   - 61: {fileID: 6130884}
+  - 114: {fileID: 11498860}
   m_Layer: 0
   m_Name: Range
   m_TagString: Untagged
@@ -57,7 +58,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 159330}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -.567318559, y: -.320127487, z: 0}
+  m_LocalPosition: {x: -1.25009227, y: .0034011486, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 430890}
@@ -127,7 +128,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 3
   m_audioClip: {fileID: 8300000, guid: e05a4c5538775824690841801f48da4a, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -191,6 +192,23 @@ Animator:
   m_ApplyRootMotion: 1
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &11498860
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 130890}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb800753454ced48a70b633adcc48a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Movement: 0
+  Attack: 0
+  Defense: 0
+  Health: 0
+  Range: 0
+  ParentGameObject: {fileID: 159330}
 --- !u!212 &21259330
 SpriteRenderer:
   m_ObjectHideFlags: 1
