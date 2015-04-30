@@ -4,7 +4,7 @@ using System.Collections;
 public class UnitMovment : MonoBehaviour {
 
 
-    private float movespeed = 0.16f;
+    private float movespeed = 1f;
     public float movedistance;
 
 

@@ -6,10 +6,11 @@ public class cityscript : MonoBehaviour {
     private GameObject unit;
     public bool occupied;
     public int cityHealth = 10;
+    private string citytag;
 
-    public SpriteRenderer city;
-    public SpriteRenderer redcity;
-    public SpriteRenderer bluecity;
+    public GameObject city;
+    public GameObject redcity;
+    public GameObject bluecity;
     public int healAmount;
 
 
@@ -22,7 +23,7 @@ public class cityscript : MonoBehaviour {
 	
     void OnTriggerEnter2D(Collider2D call)
     {
-        Debug.Log("enter trigger");
+        //Debug.Log("enter trigger");
         unit = call.gameObject;
         occupied = true;
     }
@@ -63,24 +64,25 @@ public class cityscript : MonoBehaviour {
 
     private void capture()
     {
-        if(unit.tag != this.tag)
+        if (unit.tag != citytag)
         {
             this.cityHealth -= 5;
             if(cityHealth <= 0)
             {
                 if(unit.tag == "red")
                 {
-                    this.redcity.enabled = true;
-                    this.city.enabled = false;
-                    this.bluecity.enabled = false;
+                    this.redcity.renderer.enabled = true;
+                    this.city.renderer.enabled = false;
+                    this.bluecity.renderer.enabled = false;
                 }
                 else
                 {
-                    this.redcity.enabled = false;
-                    this.city.enabled = false;
-                    this.bluecity.enabled = true;
+                    this.bluecity.renderer.enabled = true;
+                    this.city.renderer.enabled = false;
+                    this.redcity.renderer.enabled = false;
                 }
                 cityHealth = 10;
+                citytag = unit.tag;
             }
         }
     }
