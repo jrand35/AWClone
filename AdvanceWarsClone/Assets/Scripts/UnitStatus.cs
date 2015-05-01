@@ -10,24 +10,25 @@ public class UnitStatus : MonoBehaviour {
 	public int Range;
 	private List<GameObject> Enemies;
     private bool canAttack;
-    private string RedOrBlue;
+    private string EnemyColor;
 	public GameObject ParentGameObject;
 	// Use this for initialization
 	void Start () {
         canAttack = false;
+        Enemies = new List<GameObject>();
 	}
     
     void Awake()
     {
         if (ParentGameObject.gameObject.tag == "blue")
         {
-            RedOrBlue = "blue";
+            EnemyColor = "red";
         }
         if (ParentGameObject.gameObject.tag == "red")
         {
-            RedOrBlue = "red";
+            EnemyColor = "blue";
         }
-		Debug.Log (RedOrBlue);
+		
     }
 	
     // Update is called once per frame
@@ -37,24 +38,29 @@ public class UnitStatus : MonoBehaviour {
 	}
     void OnTriggerExit2D(Collider2D col)
     {
-        if (col.gameObject.tag != RedOrBlue)
+        if (col.gameObject.tag == EnemyColor)
         {
-            
+            Enemies.Remove(col.gameObject);
+            Debug.Log(Enemies.Count);
 			canAttack = false;
         }
     }
     void OnTriggerEnter2D(Collider2D col)
     {
-        if (col.gameObject.tag != RedOrBlue)
+        if (col.gameObject.tag == EnemyColor)
         {
-			Enemies.Add(col.gameObject);
-			Debug.Log(Enemies.Count);
+            Enemies.Add(col.gameObject);
+            Debug.Log(Enemies.Count);
 			canAttack = true;
         }
     }
 
 	public void AttackHim(int TotalAttack){
-		TotalAttack = (Health / 2) * Attack;
+		TotalAttack = Mathf.RoundToInt((Health / 2) * Attack);
 	}
-    
+
+    public void Attacked(int TotalAttack)
+    {
+        Health = Health - (TotalAttack - Defense);
+    }
 }

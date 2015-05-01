@@ -54,7 +54,6 @@
      <Compile Include="Assets\Scripts\UnitStateController.cs" />
      <Compile Include="Assets\Scripts\UnitStateListener.cs" />
      <Compile Include="Assets\Scripts\UnitStatus.cs" />
-     <Compile Include="Assets\Scripts\cityhealth.cs" />
      <Compile Include="Assets\Scripts\cityscript.cs" />
      <Compile Include="Assets\Scripts\spawnScript.cs" />
  <Reference Include="UnityEngine.UI">
