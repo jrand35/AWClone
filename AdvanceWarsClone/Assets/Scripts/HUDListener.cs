@@ -27,7 +27,6 @@ public class HUDListener : MonoBehaviour
                 unitText.text = "Movement: " + unitStatus.Movement + "\n" +
                     "Attack: " + unitStatus.Attack + "\n" +
                     "Defense: " + unitStatus.Defense + "\n" +
-                    "Range: " + unitStatus.Range + "\n" +
 					"Health: " + unitStatus.Health;
             }
         }
@@ -37,7 +36,7 @@ public class HUDListener : MonoBehaviour
             unitText.text = "Movement: " + "\n" +
                 "Attack: " + "\n" +
                 "Defense: " + "\n" +
-                "Range: ";
+                "Health: ";
         }
     }
 

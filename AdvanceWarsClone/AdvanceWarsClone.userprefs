@@ -1,9 +1,9 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\HUDListener.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\UnitStatus.cs">
     <Files>
-      <File FileName="Assets\Scripts\UnitStatus.cs" Line="124" Column="18" />
-      <File FileName="Assets\Scripts\HUDListener.cs" Line="31" Column="37" />
+      <File FileName="Assets\Scripts\UnitStatus.cs" Line="19" Column="72" />
+      <File FileName="Assets\Scripts\HUDListener.cs" Line="39" Column="24" />
       <File FileName="Assets\Scripts\UnitState.cs" Line="13" Column="15" />
     </Files>
   </MonoDevelop.Ide.Workbench>

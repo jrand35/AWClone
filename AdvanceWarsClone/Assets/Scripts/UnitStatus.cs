@@ -1,25 +1,27 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
-
+/// <summary>
+/// This Script is made to handle lots of events, like attacking and moving. All of the players stats are here,
+/// as well as refrences to the colliders that detect whether or not there is an enemy in range.
+/// </summary>
 public class UnitStatus : MonoBehaviour {
-    public int Movement;
-    public int Attack;
-    public int Defense;
-	public int Health;
-	public int Range;
-	private float movespeed = 1.0f;
-	private List<UnitStatus> Enemies;
-    private bool canAttack;
-	private bool selected;
-    private string EnemyColor;
-	public GameObject ParentGameObject;
-	private UnitState unitState;
-	private GameObject[] EnemyArray;
-	public GameObject FireButton;
-	// Use this for initialization
-	void Start () {
-        canAttack = false;
+    public int Movement;///< How far we can move in one turn.
+    public int Attack;///< our Attack Stat
+	public int Defense;///< our Defense Stat
+	public int Health;///< our Health Stat
+	private float movespeed = 1.0f;///< Determines how far one move is
+	private List<UnitStatus> Enemies;///< A List of enemies that is added to when an enemy collides with our trigger
+	private bool selected;///< A bool that checks if we are selected. if we are, then we can move.
+	private string EnemyColor;///< The enemy team color
+	public GameObject ParentGameObject;///< the gameobject that this script is attached to
+	private UnitState unitState;///< A refrence to the unit state script
+	public GameObject FireButton;///< The Button on screen that says FIRE!
+	/// <summary>
+	/// Instantiates the list
+	/// </summary>
+	void Start () 
+	{
         Enemies = new List<UnitStatus>();
 	}
     
@@ -82,7 +84,6 @@ public class UnitStatus : MonoBehaviour {
 			Debug.Log (Enemies.Count);
 			if (Enemies.Count <= 0)
 			{
-				canAttack = false;
 				FireButton.SetActive(false);
 			}
         }
@@ -93,7 +94,6 @@ public class UnitStatus : MonoBehaviour {
         {
             Enemies.Add(col.gameObject.GetComponentInChildren<UnitStatus>());
             Debug.Log(Enemies.Count);
-			canAttack = true;
 			FireButton.SetActive(true);
         }
     }
@@ -106,7 +106,6 @@ public class UnitStatus : MonoBehaviour {
 			Debug.Log (Enemies.Count);
 			if (Enemies.Count <= 0)
 			{
-				canAttack = false;
 				FireButton.SetActive(false);
 			}
 		}
