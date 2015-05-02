@@ -16,7 +16,7 @@ public class UnitMovment : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-        if (selected) {
+        
 					
 			if (movedistance > 0) {
             
@@ -40,7 +40,7 @@ public class UnitMovment : MonoBehaviour {
 					moveY (movespeed * -1);
 				}
         
-			}
+
 		}
 
 	} //end update

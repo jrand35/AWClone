@@ -10,6 +10,8 @@ public class UnitState : MonoBehaviour
     private Animator anim;
     private unitStates currentState = unitStates.idle;
     private unitStates previousState = unitStates.idle;
+	private UnitStatus unitStatus;
+	private bool isSelected;
 
     public enum unitStates
     {
@@ -23,7 +25,7 @@ public class UnitState : MonoBehaviour
 
     void Awake()
     {
-
+		unitStatus = this.GetComponentInChildren<UnitStatus>();
     }
 
     void OnEnable()
@@ -118,7 +120,7 @@ public class UnitState : MonoBehaviour
         {
             case unitStates.idle:
                 Debug.Log(gameObject.name);
-				AttachedGameObject.isSelected(false);
+				unitStatus.AmISelected(false);
                 break;
 
             case unitStates.inactive:
@@ -130,7 +132,7 @@ public class UnitState : MonoBehaviour
                 break;
 
             case unitStates.selected:
-				AttachedGameObject.isSelected(true);
+				unitStatus.AmISelected(true);
                 break;
 
             case unitStates.moving:
@@ -143,8 +145,5 @@ public class UnitState : MonoBehaviour
         }
     }
 
-    void Attack()
-    {
-        
-    }
+    
 }

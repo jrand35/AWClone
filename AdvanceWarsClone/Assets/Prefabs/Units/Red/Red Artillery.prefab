@@ -470,6 +470,7 @@ MonoBehaviour:
   Health: 0
   Range: 0
   ParentGameObject: {fileID: 110278}
+  FireButton: {fileID: 0}
 --- !u!114 &11487730
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -487,6 +488,7 @@ MonoBehaviour:
   Health: 0
   Range: 0
   ParentGameObject: {fileID: 110278}
+  FireButton: {fileID: 0}
 --- !u!212 &21210278
 SpriteRenderer:
   m_ObjectHideFlags: 1
