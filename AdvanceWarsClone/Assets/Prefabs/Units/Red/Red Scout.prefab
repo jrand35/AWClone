@@ -30,6 +30,7 @@ GameObject:
   - 212: {fileID: 21281266}
   - 95: {fileID: 9581266}
   - 82: {fileID: 8295390}
+  - 114: {fileID: 11464404}
   m_Layer: 0
   m_Name: Red Scout
   m_TagString: red
@@ -179,6 +180,18 @@ Animator:
   m_ApplyRootMotion: 1
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &11464404
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 181266}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e073a7dbb1411904db9534229863c6de, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  movedistance: 20
 --- !u!212 &21281266
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -197,7 +210,7 @@ SpriteRenderer:
   m_UseLightProbes: 0
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_SortingLayerID: 1908791627
+  m_SortingLayerID: 133804767
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: b1aefa04107a99142bca1d8e50a17b71, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

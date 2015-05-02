@@ -8,10 +8,6 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 404634}
-  - 61: {fileID: 6104642}
-  - 61: {fileID: 6104640}
-  - 61: {fileID: 6104638}
-  - 61: {fileID: 6104636}
   m_Layer: 0
   m_Name: RangeCollider
   m_TagString: Untagged
@@ -31,6 +27,8 @@ GameObject:
   - 95: {fileID: 9586282}
   - 82: {fileID: 8228124}
   - 61: {fileID: 6104634}
+  - 114: {fileID: 11442432}
+  - 50: {fileID: 5087730}
   m_Layer: 0
   m_Name: Red Infantry Unit
   m_TagString: red
@@ -63,6 +61,21 @@ Transform:
   - {fileID: 404634}
   m_Father: {fileID: 0}
   m_RootOrder: 0
+--- !u!50 &5087730
+Rigidbody2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 186282}
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: .0500000007
+  m_GravityScale: 1
+  m_FixedAngle: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
 --- !u!61 &6104634
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -74,50 +87,6 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_Size: {x: 1, y: 1}
   m_Center: {x: 0, y: 0}
---- !u!61 &6104636
-BoxCollider2D:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 104634}
-  m_Enabled: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Size: {x: 1, y: 1}
-  m_Center: {x: 0, y: -1}
---- !u!61 &6104638
-BoxCollider2D:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 104634}
-  m_Enabled: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Size: {x: 1, y: 1}
-  m_Center: {x: -1, y: 0}
---- !u!61 &6104640
-BoxCollider2D:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 104634}
-  m_Enabled: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Size: {x: 1, y: 1}
-  m_Center: {x: 1, y: 0}
---- !u!61 &6104642
-BoxCollider2D:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 104634}
-  m_Enabled: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Size: {x: 1, y: 1}
-  m_Center: {x: 0, y: 1}
 --- !u!82 &8228124
 AudioSource:
   m_ObjectHideFlags: 1
@@ -191,6 +160,18 @@ Animator:
   m_ApplyRootMotion: 1
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &11442432
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 186282}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e073a7dbb1411904db9534229863c6de, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  movedistance: 10
 --- !u!212 &21286282
 SpriteRenderer:
   m_ObjectHideFlags: 1

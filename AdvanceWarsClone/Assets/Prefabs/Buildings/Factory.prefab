@@ -24,6 +24,9 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 413668}
+  - 114: {fileID: 11417774}
+  - 61: {fileID: 6134790}
+  - 50: {fileID: 5036560}
   m_Layer: 0
   m_Name: Factory
   m_TagString: Untagged
@@ -40,6 +43,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 413670}
   - 212: {fileID: 21213670}
+  - 114: {fileID: 11438618}
   m_Layer: 0
   m_Name: Red Factory
   m_TagString: Untagged
@@ -56,6 +60,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 413672}
   - 212: {fileID: 21213672}
+  - 114: {fileID: 11417894}
   m_Layer: 0
   m_Name: Blue Factory
   m_TagString: Untagged
@@ -114,6 +119,79 @@ Transform:
   m_Children: []
   m_Father: {fileID: 413668}
   m_RootOrder: 1
+--- !u!50 &5036560
+Rigidbody2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 113668}
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: .0500000007
+  m_GravityScale: 1
+  m_FixedAngle: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+--- !u!61 &6134790
+BoxCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 113668}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Size: {x: .75, y: .75}
+  m_Center: {x: -.0500000007, y: -.5}
+--- !u!114 &11417774
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 113668}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4363e27f39479e044b8dbe5d86819eaa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  occupied: 0
+  cityHealth: 10
+  city: {fileID: 112108}
+  redcity: {fileID: 113670}
+  bluecity: {fileID: 113672}
+  healAmount: 0
+--- !u!114 &11417894
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 113672}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6633e11a32382fa45bb99593cc01b188, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnpoint: {fileID: 113672}
+  infantry: {fileID: 159330, guid: ac2fd3117167b1441aae80edad35508c, type: 2}
+  mech: {fileID: 111760, guid: f7f431d7aded32b448c9bafae0b45546, type: 2}
+  recon: {fileID: 100002, guid: cb94cb6193e3a954d85e148d2744bf13, type: 2}
+--- !u!114 &11438618
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 113670}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6633e11a32382fa45bb99593cc01b188, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnpoint: {fileID: 113670}
+  infantry: {fileID: 186282, guid: 3b83e9db7b4ffd04cb32389c47716745, type: 2}
+  mech: {fileID: 100884, guid: 2f01738f850f19c439f73e7b93e15ad3, type: 2}
+  recon: {fileID: 181266, guid: 54960fe33c03ac84bb38296d5e400537, type: 2}
 --- !u!212 &21212108
 SpriteRenderer:
   m_ObjectHideFlags: 1

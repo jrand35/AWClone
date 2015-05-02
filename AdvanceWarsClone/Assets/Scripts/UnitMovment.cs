@@ -4,7 +4,7 @@ using System.Collections;
 public class UnitMovment : MonoBehaviour {
 
 
-    private float movespeed = 0.16f;
+    private float movespeed = 1f;
     public float movedistance;
 
 
@@ -40,13 +40,17 @@ public class UnitMovment : MonoBehaviour {
 	} //end update
     void moveX(float speed)
     {
-        this.transform.position += new Vector3(speed,0,0);
+		if(this.tag == "red")
+			this.transform.position += new Vector3(speed, 0, 0);
+		else
+			this.transform.position += new Vector3(-speed, 0, 0);
         movedistance--;
         return;
     }
     void moveY(float speed)
     {
-        this.transform.position += new Vector3(0, speed, 0);
+
+		this.transform.position += new Vector3(0, speed, 0);
         movedistance--;
         return;
     }

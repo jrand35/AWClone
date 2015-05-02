@@ -12,6 +12,7 @@ GameObject:
   - 95: {fileID: 9511760}
   - 61: {fileID: 6163576}
   - 82: {fileID: 8271292}
+  - 114: {fileID: 11446888}
   m_Layer: 0
   m_Name: Blue Mech
   m_TagString: blue
@@ -191,6 +192,18 @@ Animator:
   m_ApplyRootMotion: 1
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &11446888
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 111760}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e073a7dbb1411904db9534229863c6de, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  movedistance: 5
 --- !u!212 &21211760
 SpriteRenderer:
   m_ObjectHideFlags: 1
