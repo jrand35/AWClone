@@ -4,7 +4,7 @@ using System.Collections;
 public class UnitMovment : MonoBehaviour {
 
 
-    private float movespeed = 0.16f;
+    private float movespeed = 1.0f;
     public float movedistance;
 
 
@@ -16,26 +16,32 @@ public class UnitMovment : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-        if (movedistance > 0)
-        {
-            if (Input.GetKeyDown(KeyCode.RightArrow))
-            {
-                moveX(movespeed);
-            }
-            if (Input.GetKeyDown(KeyCode.LeftArrow))
-            {
-                moveX(movespeed * -1);
-            }
-            if (Input.GetKeyDown(KeyCode.UpArrow))
-            {
-                moveY(movespeed);
-            }
-            if (Input.GetKeyDown(KeyCode.DownArrow))
-            {
-                moveY(movespeed * -1);
-            }
-        }
-
+        if (selected) {
+					
+			if (movedistance > 0) {
+            
+				if (Input.GetKeyDown (KeyCode.RightArrow)) 
+				{
+                	moveX (movespeed);
+   				}
+            
+				if (Input.GetKeyDown (KeyCode.LeftArrow)) 
+				{
+                	moveX (movespeed * -1);
+            	}
+            
+				if (Input.GetKeyDown (KeyCode.UpArrow)) 
+				{
+					moveY (movespeed);
+				}
+            
+				if (Input.GetKeyDown (KeyCode.DownArrow)) 
+				{
+					moveY (movespeed * -1);
+				}
+        
+			}
+		}
 
 	} //end update
     void moveX(float speed)

@@ -11,7 +11,9 @@ GameObject:
   - 212: {fileID: 21254502}
   - 95: {fileID: 9554502}
   - 82: {fileID: 8261302}
-  m_Layer: 0
+  - 50: {fileID: 5096444}
+  - 61: {fileID: 6196444}
+  m_Layer: 8
   m_Name: Red Medium Tank
   m_TagString: red
   m_Icon: {fileID: 0}
@@ -37,6 +39,23 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &160378
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 460378}
+  - 60: {fileID: 6060378}
+  - 114: {fileID: 11460378}
+  m_Layer: 8
+  m_Name: RangeCollider
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!4 &454502
 Transform:
   m_ObjectHideFlags: 1
@@ -44,9 +63,10 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 154502}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: .264999986, y: -.337000012, z: 0}
+  m_LocalPosition: {x: 7.04057646, y: -1.30883861, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 460378}
   - {fileID: 456376}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -61,7 +81,57 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 454502}
+  m_RootOrder: 1
+--- !u!4 &460378
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 160378}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 8.57194138, y: .211131573, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 454502}
   m_RootOrder: 0
+--- !u!50 &5096444
+Rigidbody2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 154502}
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: .0500000007
+  m_GravityScale: 1
+  m_FixedAngle: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+--- !u!60 &6060378
+PolygonCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 160378}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Poly:
+    m_Paths:
+    - - {x: -.464794159, y: -.364226341}
+      - {x: -1.39958763, y: -.349697948}
+      - {x: -1.3837719, y: .332044899}
+      - {x: -.45304203, y: .403362155}
+      - {x: -.311965942, y: 1.41595519}
+      - {x: .269081116, y: 1.40764332}
+      - {x: .431112289, y: .43191278}
+      - {x: 1.32516098, y: .410488009}
+      - {x: 1.33127975, y: -.402515292}
+      - {x: .410491943, y: -.417323947}
+      - {x: .383441925, y: -1.4128176}
+      - {x: -.405223846, y: -1.41794622}
 --- !u!61 &6156376
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -106,6 +176,17 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_Size: {x: 1, y: 1}
   m_Center: {x: 0, y: -1}
+--- !u!61 &6196444
+BoxCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 154502}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Size: {x: 1, y: 1}
+  m_Center: {x: 0, y: 0}
 --- !u!82 &8261302
 AudioSource:
   m_ObjectHideFlags: 1
@@ -179,6 +260,23 @@ Animator:
   m_ApplyRootMotion: 1
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &11460378
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 160378}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb800753454ced48a70b633adcc48a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Movement: 0
+  Attack: 0
+  Defense: 0
+  Health: 0
+  Range: 0
+  ParentGameObject: {fileID: 154502}
 --- !u!212 &21254502
 SpriteRenderer:
   m_ObjectHideFlags: 1

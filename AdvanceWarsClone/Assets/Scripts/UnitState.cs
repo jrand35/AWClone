@@ -5,8 +5,7 @@ public class UnitState : MonoBehaviour
 {
     public delegate void unitStateHandler(unitStates newState, GameObject caller);
     public static event unitStateHandler unitStateChangeEvent;
-    private GameObject FirstPlayer;///< this is the current player who is moving and attacking
-    private GameObject SecondPlayer;///< this is the player that the FirstPlayer is attacking
+    private GameObject AttachedGameObject;
     public LayerMask Unit;
     private Animator anim;
     private unitStates currentState = unitStates.idle;
@@ -119,6 +118,7 @@ public class UnitState : MonoBehaviour
         {
             case unitStates.idle:
                 Debug.Log(gameObject.name);
+				AttachedGameObject.isSelected(false);
                 break;
 
             case unitStates.inactive:
@@ -130,6 +130,7 @@ public class UnitState : MonoBehaviour
                 break;
 
             case unitStates.selected:
+				AttachedGameObject.isSelected(true);
                 break;
 
             case unitStates.moving:
