@@ -8,11 +8,6 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 430890}
-  - 61: {fileID: 6130890}
-  - 61: {fileID: 6130888}
-  - 61: {fileID: 6130886}
-  - 61: {fileID: 6130884}
-  - 114: {fileID: 11498860}
   m_Layer: 0
   m_Name: Range
   m_TagString: Untagged
@@ -32,6 +27,8 @@ GameObject:
   - 95: {fileID: 9559330}
   - 82: {fileID: 8253668}
   - 61: {fileID: 6156804}
+  - 114: {fileID: 11442486}
+  - 50: {fileID: 5078960}
   m_Layer: 0
   m_Name: Blue Infantry
   m_TagString: blue
@@ -64,50 +61,21 @@ Transform:
   - {fileID: 430890}
   m_Father: {fileID: 0}
   m_RootOrder: 0
---- !u!61 &6130884
-BoxCollider2D:
+--- !u!50 &5078960
+Rigidbody2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 130890}
-  m_Enabled: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Size: {x: 1, y: 1}
-  m_Center: {x: 0, y: -1}
---- !u!61 &6130886
-BoxCollider2D:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 130890}
-  m_Enabled: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Size: {x: 1, y: 1}
-  m_Center: {x: 0, y: 1}
---- !u!61 &6130888
-BoxCollider2D:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 130890}
-  m_Enabled: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Size: {x: 1, y: 1}
-  m_Center: {x: -1, y: 0}
---- !u!61 &6130890
-BoxCollider2D:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 130890}
-  m_Enabled: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Size: {x: 1, y: 1}
-  m_Center: {x: 1, y: 0}
+  m_GameObject: {fileID: 159330}
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: .0500000007
+  m_GravityScale: 1
+  m_FixedAngle: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
 --- !u!61 &6156804
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -192,23 +160,18 @@ Animator:
   m_ApplyRootMotion: 1
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &11498860
+--- !u!114 &11442486
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 130890}
+  m_GameObject: {fileID: 159330}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bbb800753454ced48a70b633adcc48a0, type: 3}
+  m_Script: {fileID: 11500000, guid: e073a7dbb1411904db9534229863c6de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Movement: 0
-  Attack: 0
-  Defense: 0
-  Health: 0
-  Range: 0
-  ParentGameObject: {fileID: 159330}
+  movedistance: 10
 --- !u!212 &21259330
 SpriteRenderer:
   m_ObjectHideFlags: 1

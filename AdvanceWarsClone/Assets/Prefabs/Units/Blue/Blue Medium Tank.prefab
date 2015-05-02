@@ -12,6 +12,7 @@ GameObject:
   - 95: {fileID: 9516322}
   - 61: {fileID: 6122778}
   - 82: {fileID: 8290548}
+  - 114: {fileID: 11450206}
   m_Layer: 0
   m_Name: Blue Medium Tank
   m_TagString: blue
@@ -191,6 +192,18 @@ Animator:
   m_ApplyRootMotion: 1
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &11450206
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 116322}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e073a7dbb1411904db9534229863c6de, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  movedistance: 7
 --- !u!212 &21216322
 SpriteRenderer:
   m_ObjectHideFlags: 1

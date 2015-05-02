@@ -71,15 +71,19 @@ public class cityscript : MonoBehaviour {
             {
                 if(unit.tag == "red")
                 {
+					this.redcity.SetActive(true);
                     this.redcity.renderer.enabled = true;
                     this.city.renderer.enabled = false;
                     this.bluecity.renderer.enabled = false;
+					this.bluecity.SetActive(false);
                 }
                 else
                 {
+					this.bluecity.SetActive(true);
                     this.bluecity.renderer.enabled = true;
                     this.city.renderer.enabled = false;
                     this.redcity.renderer.enabled = false;
+					this.redcity.SetActive(false);
                 }
                 cityHealth = 10;
                 citytag = unit.tag;
