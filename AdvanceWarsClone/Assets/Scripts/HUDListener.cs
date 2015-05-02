@@ -23,11 +23,12 @@ public class HUDListener : MonoBehaviour
         {
             if (obj != null)
             {
-                UnitStatus unitStatus = obj.GetComponent<UnitStatus>();
+                UnitStatus unitStatus = obj.GetComponentInChildren<UnitStatus>();
                 unitText.text = "Movement: " + unitStatus.Movement + "\n" +
                     "Attack: " + unitStatus.Attack + "\n" +
                     "Defense: " + unitStatus.Defense + "\n" +
-                    "Range: " + unitStatus.Range;
+                    "Range: " + unitStatus.Range + "\n" +
+					"Health: " + unitStatus.Health;
             }
         }
         else if (newState == UnitState.unitStates.idle)

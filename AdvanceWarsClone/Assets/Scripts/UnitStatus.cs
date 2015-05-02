@@ -15,7 +15,7 @@ public class UnitStatus : MonoBehaviour {
     private string EnemyColor;
 	public GameObject ParentGameObject;
 	private UnitState unitState;
-
+	private GameObject[] EnemyArray;
 	public GameObject FireButton;
 	// Use this for initialization
 	void Start () {
@@ -78,7 +78,7 @@ public class UnitStatus : MonoBehaviour {
     void OnTriggerExit2D(Collider2D col)
     {
         if (col.gameObject.tag == EnemyColor) {
-			Enemies.Remove (col.gameObject.GetComponent<UnitStatus>());
+			Enemies.Remove (col.gameObject.GetComponentInChildren<UnitStatus>());
 			Debug.Log (Enemies.Count);
 			if (Enemies.Count <= 0)
 			{
@@ -91,7 +91,7 @@ public class UnitStatus : MonoBehaviour {
     {
         if (col.gameObject.tag == EnemyColor)
         {
-            Enemies.Add(col.gameObject.GetComponent<UnitStatus>());
+            Enemies.Add(col.gameObject.GetComponentInChildren<UnitStatus>());
             Debug.Log(Enemies.Count);
 			canAttack = true;
 			FireButton.SetActive(true);
@@ -99,17 +99,19 @@ public class UnitStatus : MonoBehaviour {
     }
 
 	public void AttackHim(){
-		int TotalAttack = Mathf.RoundToInt((Health / 2) * Attack);
-		Enemies.ForEach(delegate(UnitStatus obj) {
+		int TotalAttack = Mathf.RoundToInt ((Health / 2) * Attack);
+		foreach (UnitStatus obj in Enemies) {
 			obj.Attacked(TotalAttack);
-	});
-		/*for (int i = 1; i < Enemies.Count; i++) {
-			EnemyStatus = Enemies.ForEach();
-			EnemyStatus.Attacked (TotalAttack);
-		}*/
+			Enemies.Remove (obj);
+			Debug.Log (Enemies.Count);
+			if (Enemies.Count <= 0)
+			{
+				canAttack = false;
+				FireButton.SetActive(false);
+			}
+		}
 
 	}
-
     public void Attacked(int TotalAttack)
     {
         Health = Health - (TotalAttack - Defense);
@@ -119,6 +121,7 @@ public class UnitStatus : MonoBehaviour {
     }
 	public void AmISelected(bool yorn)
 	{
-		yorn = selected;
+		selected = yorn;
 	}
+
 }

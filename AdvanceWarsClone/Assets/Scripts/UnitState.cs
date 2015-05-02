@@ -119,8 +119,9 @@ public class UnitState : MonoBehaviour
         switch (newState)
         {
             case unitStates.idle:
-                Debug.Log(gameObject.name);
-				unitStatus.AmISelected(false);
+			    unitStatus.AmISelected(false);
+				Debug.Log(gameObject.name + " false");
+				
                 break;
 
             case unitStates.inactive:
@@ -132,6 +133,7 @@ public class UnitState : MonoBehaviour
                 break;
 
             case unitStates.selected:
+				Debug.Log(gameObject.name + " True");
 				unitStatus.AmISelected(true);
                 break;
 
