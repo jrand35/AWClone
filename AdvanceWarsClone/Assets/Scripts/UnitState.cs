@@ -1,4 +1,10 @@
-﻿using UnityEngine;
+﻿///<summary>
+///The Unit's state machine, attached to all Unit GameObjects
+///<remarks>
+///Author: Joshua Rand
+///</remarks>
+///</summary>
+using UnityEngine;
 using System.Collections;
 
 /// <summary>
@@ -6,16 +12,44 @@ using System.Collections;
 /// </summary>
 public class UnitState : MonoBehaviour
 {
+    /// <summary>
+    /// Delegate function called (selectively) whenever the unit state machine changes state
+    /// </summary>
+    /// <param name="newState"></param>
+    /// <param name="caller"></param>
     public delegate void unitStateHandler(unitStates newState, GameObject caller);
+    /// <summary>
+    /// Delegate event for unitStateHandler
+    /// </summary>
     public static event unitStateHandler unitStateChangeEvent;
-    private GameObject AttachedGameObject;
+    /// <summary>
+    /// Determines what GameObjects are considered "Units", set to Unit layer
+    /// </summary>
     public LayerMask Unit;
+    /// <summary>
+    /// Private reference to GameObject's Animator
+    /// </summary>
     private Animator anim;
+    /// <summary>
+    /// Tracks the current state of the unit state machine
+    /// </summary>
     private unitStates currentState = unitStates.idle;
+    /// <summary>
+    /// Tracks the previous state of the unit state machine
+    /// </summary>
     private unitStates previousState = unitStates.idle;
+    /// <summary>
+    /// Private reference to child GameObject RangeCollider's UnitStatus script
+    /// </summary>
 	private UnitStatus unitStatus;
+    /// <summary>
+    /// Determines if the unit is currently selected (in it's selected state)
+    /// </summary>
 	private bool isSelected;
 
+    /// <summary>
+    /// All of the Unit's enumerated states
+    /// </summary>
     public enum unitStates
     {
         idle = 0,
@@ -78,6 +112,9 @@ public class UnitState : MonoBehaviour
         
     }
 
+    /// <summary>
+    /// Called in LateUpdate(), determines what unit does based on its current state
+    /// </summary>
     void onStateCycle()
     {
         switch (currentState)
@@ -102,6 +139,12 @@ public class UnitState : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Change the current state of the unit, delegEvent indicates whether or not to call delegate unitStateChangeEvent event
+    /// </summary>
+    /// <param name="newState"></param>
+    /// <param name="caller"></param>
+    /// <param name="delegEvent"></param>
     void OnUnitStateChange(unitStates newState, GameObject caller, bool delegEvent)
     {
         //Does return if newState == currentState

@@ -1,4 +1,10 @@
-﻿using UnityEngine.UI;
+﻿///<summary>
+///Attached to the HUD GameObject, displays the stats of the currently selected unit
+///<remarks>
+///Author: Joshua Rand
+///</remarks>
+///</summary>
+using UnityEngine.UI;
 using UnityEngine;
 using System.Collections;
 
@@ -8,7 +14,10 @@ using System.Collections;
 /// </summary>
 public class HUDListener : MonoBehaviour
 {
-
+    /// <summary>
+    /// Private reference to the child Text object
+    /// Displays the currently selected unit's Movement, Attack, Defense and Health
+    /// </summary>
     private Text unitText;
 
     void OnEnable()
@@ -21,6 +30,13 @@ public class HUDListener : MonoBehaviour
         UnitState.unitStateChangeEvent -= OnUnitStateChange;
     }
 
+    /// <summary>
+    /// Called by UnitState.unitStateChangeEvent
+    /// Displays the unit's stats when newState is set to selected and provided a reference to the unit GameObject
+    /// Displays empty stats when newState is set to idle
+    /// </summary>
+    /// <param name="newState"></param>
+    /// <param name="obj"></param>
     void OnUnitStateChange(UnitState.unitStates newState, GameObject obj)
     {
         if (newState == UnitState.unitStates.selected)
