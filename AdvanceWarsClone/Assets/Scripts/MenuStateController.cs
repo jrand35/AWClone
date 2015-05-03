@@ -1,6 +1,9 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+/// <summary>
+/// Menu state controller.
+/// </summary>
 public class MenuStateController : MonoBehaviour {
 
     public enum menuStates

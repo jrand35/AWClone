@@ -2,6 +2,10 @@
 using UnityEngine;
 using System.Collections;
 
+
+/// <summary>
+/// HUD listener. this script updates the HUD when a unit is selected
+/// </summary>
 public class HUDListener : MonoBehaviour
 {
 

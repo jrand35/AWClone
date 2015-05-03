@@ -1,6 +1,13 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+
+/// <summary>
+/// Cityscript. This script has the logic for the buildings to determin whether a city is: 
+/// occupied
+/// captured
+/// or should be healing a unit.
+/// </summary>
 public class cityscript : MonoBehaviour {
 
     private GameObject unit;
@@ -51,6 +58,9 @@ public class cityscript : MonoBehaviour {
 	
 	}
 
+	/// <summary>
+	/// this function heals a unit that sits on a city for 2 health every turn
+	/// </summary>
     private void heal()
     {
         if (unit.GetComponent<UnitStatus>().Health <= 10)
@@ -62,6 +72,9 @@ public class cityscript : MonoBehaviour {
         }
     }
 
+	/// <summary>
+	/// this is the capture function meant to allow units to capture buildings. 
+	/// </summary>
     private void capture()
     {
         if (unit.tag != citytag)

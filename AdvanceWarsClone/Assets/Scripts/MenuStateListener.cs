@@ -1,6 +1,10 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+
+/// <summary>
+/// Menu state listener. listens for events from the menu state controller
+/// </summary>
 public class MenuStateListener : MonoBehaviour {
 
     private MenuStateController.menuStates currentState = MenuStateController.menuStates.titleScreen;

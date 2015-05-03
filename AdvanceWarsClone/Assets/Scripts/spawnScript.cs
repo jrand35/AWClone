@@ -1,6 +1,10 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+
+/// <summary>
+/// this script spwans units when their respective hotkey is pressed.
+/// </summary>
 public class spawnScript : MonoBehaviour {
 
 
@@ -26,7 +30,9 @@ public class spawnScript : MonoBehaviour {
         }
 	
 	}
-
+	/// <summary>
+	/// spawning logic
+	/// </summary>
     void spwanunit()
     {
 

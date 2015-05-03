@@ -1,6 +1,10 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+
+/// <summary>
+/// Unit state listener.
+/// </summary>
 public class UnitStateListener : MonoBehaviour
 {
 

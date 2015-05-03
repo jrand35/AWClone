@@ -1,6 +1,9 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+/// <summary>
+/// Unit movment script.
+/// </summary>
 public class UnitMovment : MonoBehaviour {
 
 
@@ -44,12 +47,21 @@ public class UnitMovment : MonoBehaviour {
 		}
 
 	} //end update
+
+	/// <summary>
+	/// Moves the unit in the x direction.
+	/// </summary>
+	/// <param name="speed">Speed.</param>
     void moveX(float speed)
     {
         this.transform.position += new Vector3(speed,0,0);
         movedistance--;
         return;
     }
+	/// <summary>
+	/// Moves the unit in the y direction.
+	/// </summary>
+	/// <param name="speed">Speed.</param>
     void moveY(float speed)
     {
         this.transform.position += new Vector3(0, speed, 0);

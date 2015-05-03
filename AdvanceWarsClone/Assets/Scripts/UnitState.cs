@@ -1,6 +1,9 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+/// <summary>
+/// Unit states. event handler
+/// </summary>
 public class UnitState : MonoBehaviour
 {
     public delegate void unitStateHandler(unitStates newState, GameObject caller);

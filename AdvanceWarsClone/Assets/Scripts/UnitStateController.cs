@@ -1,6 +1,9 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+/// <summary>
+/// Unit state controller.
+/// </summary>
 public class UnitStateController : MonoBehaviour
 {
 

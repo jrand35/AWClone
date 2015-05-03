@@ -1,10 +1,17 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\UnitStatus.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\UnitStateListener.cs">
     <Files>
-      <File FileName="Assets\Scripts\UnitStatus.cs" Line="19" Column="72" />
-      <File FileName="Assets\Scripts\HUDListener.cs" Line="39" Column="24" />
-      <File FileName="Assets\Scripts\UnitState.cs" Line="13" Column="15" />
+      <File FileName="Assets\Scripts\cityscript.cs" Line="112" Column="1" />
+      <File FileName="Assets\Scripts\UnitStatus.cs" Line="23" Column="16" />
+      <File FileName="Assets\Scripts\HUDListener.cs" Line="7" Column="70" />
+      <File FileName="Assets\Scripts\UnitState.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\spawnScript.cs" Line="34" Column="20" />
+      <File FileName="Assets\Scripts\MenuStateController.cs" Line="6" Column="15" />
+      <File FileName="Assets\Scripts\MenuStateListener.cs" Line="6" Column="75" />
+      <File FileName="Assets\Scripts\UnitMovment.cs" Line="57" Column="59" />
+      <File FileName="Assets\Scripts\UnitStateController.cs" Line="5" Column="27" />
+      <File FileName="Assets\Scripts\UnitStateListener.cs" Line="18" Column="6" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
