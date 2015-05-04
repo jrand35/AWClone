@@ -12,40 +12,14 @@ using System.Collections;
 /// </summary>
 public class UnitState : MonoBehaviour
 {
-    /// <summary>
-    /// Delegate function called (selectively) whenever the unit state machine changes state
-    /// </summary>
-    /// <param name="newState"></param>
-    /// <param name="caller"></param>
-    public delegate void unitStateHandler(unitStates newState, GameObject caller);
-    /// <summary>
-    /// Delegate event for unitStateHandler
-    /// </summary>
-    public static event unitStateHandler unitStateChangeEvent;
-    /// <summary>
-    /// Determines what GameObjects are considered "Units", set to Unit layer
-    /// </summary>
-    public LayerMask Unit;
-    /// <summary>
-    /// Private reference to GameObject's Animator
-    /// </summary>
-    private Animator anim;
-    /// <summary>
-    /// Tracks the current state of the unit state machine
-    /// </summary>
-    private unitStates currentState = unitStates.idle;
-    /// <summary>
-    /// Tracks the previous state of the unit state machine
-    /// </summary>
-    private unitStates previousState = unitStates.idle;
-    /// <summary>
-    /// Private reference to child GameObject RangeCollider's UnitStatus script
-    /// </summary>
-	private UnitStatus unitStatus;
-    /// <summary>
-    /// Determines if the unit is currently selected (in it's selected state)
-    /// </summary>
-	private bool isSelected;
+    public delegate void unitStateHandler(unitStates newState, GameObject caller);///< Delegate function called (selectively) whenever the unit state machine changes state
+    public static event unitStateHandler unitStateChangeEvent;///< Delegate event for unitStateHandler
+    public LayerMask Unit;///< Determines what GameObjects are considered "Units", set to Unit layer
+    private Animator anim;///< Private reference to GameObjects Animator
+    private unitStates currentState = unitStates.idle;///< Tracks the current state of the unit state machine
+    private unitStates previousState = unitStates.idle;///< Tracks the previous state of the unit state machine
+    private UnitStatus unitStatus;///< Private reference to child GameObject RangeColliders UnitStatus script
+    private bool isSelected;///< Determines if the unit is currently selected (in its selected state)
 
     /// <summary>
     /// All of the Unit's enumerated states

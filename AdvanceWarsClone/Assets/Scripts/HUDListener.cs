@@ -1,5 +1,5 @@
 ﻿///<summary>
-///Attached to the HUD GameObject, displays the stats of the currently selected unit
+/// HUD listener. this script updates the HUD when a unit is selected
 ///<remarks>
 ///Author: Joshua Rand
 ///</remarks>
@@ -8,17 +8,9 @@ using UnityEngine.UI;
 using UnityEngine;
 using System.Collections;
 
-
-/// <summary>
-/// HUD listener. this script updates the HUD when a unit is selected
-/// </summary>
 public class HUDListener : MonoBehaviour
 {
-    /// <summary>
-    /// Private reference to the child Text object
-    /// Displays the currently selected unit's Movement, Attack, Defense and Health
-    /// </summary>
-    private Text unitText;
+    private Text unitText;///< Private reference to the child Text object, Displays the currently selected units Movement, Attack, Defense and Health
 
     void OnEnable()
     {

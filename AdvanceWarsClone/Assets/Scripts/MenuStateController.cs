@@ -1,5 +1,5 @@
 ﻿///<summary>
-///The Game State Listener
+///The Game State Controller
 ///Defines the game states, determines when to change to the main game screen
 ///<remarks>
 ///Author: Joshua Rand
@@ -8,9 +8,6 @@
 using UnityEngine;
 using System.Collections;
 
-/// <summary>
-/// Menu state controller.
-/// </summary>
 public class MenuStateController : MonoBehaviour {
 
     /// <summary>
@@ -22,15 +19,8 @@ public class MenuStateController : MonoBehaviour {
         mapSelect
     }
 
-    /// <summary>
-    /// Delegate function handler for when the game changes state
-    /// </summary>
-    /// <param name="newState"></param>
-    public delegate void MenuStateHandler(MenuStateController.menuStates newState);
-    /// <summary>
-    /// Delegate event for when game changes state
-    /// </summary>
-    public static event MenuStateHandler onStateChange;
+    public delegate void MenuStateHandler(MenuStateController.menuStates newState);///<  Delegate function handler for when the game changes state
+    public static event MenuStateHandler onStateChange;///< Delegate event for when game changes state
 
     /// <summary>
     /// Called by Select Map button from the title screen, starts the game

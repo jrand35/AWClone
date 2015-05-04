@@ -1,5 +1,6 @@
 ﻿///<summary>
 ///The Game State Listener.
+///Listens for events from the menu state controller
 ///Defines what happens in each state of the game
 ///States are either on title screen or on the map
 ///<remarks>
@@ -8,37 +9,14 @@
 ///</summary>
 using UnityEngine;
 using System.Collections;
-
-
-/// <summary>
-/// Menu state listener. listens for events from the menu state controller
-/// </summary>
 public class MenuStateListener : MonoBehaviour {
 
-    /// <summary>
-    /// The current state of the Game State Machine
-    /// </summary>
-    private MenuStateController.menuStates currentState = MenuStateController.menuStates.titleScreen;
-    /// <summary>
-    /// The previous state of the Game State Machine
-    /// </summary>
-    private MenuStateController.menuStates previousState = MenuStateController.menuStates.titleScreen;
-    /// <summary>
-    /// Public reference to the title screen parent object. All children are objects that appear on the title screen
-    /// </summary>
-    public GameObject titleScreenObject;
-    /// <summary>
-    /// Public reference to the map select object. All children are objects that appear on the map select screen
-    /// </summary>
-    public GameObject mapSelectObject;
-    /// <summary>
-    /// Indicates if the title screen is currently active
-    /// </summary>
-    private bool titleScreenActive;
-    /// <summary>
-    /// Indicates if the map select screen is currently active
-    /// </summary>
-    private bool mapSelectActive;
+    private MenuStateController.menuStates currentState = MenuStateController.menuStates.titleScreen;///< The current state of the Game State Machine
+    private MenuStateController.menuStates previousState = MenuStateController.menuStates.titleScreen;///< The previous state of the Game State Machine
+    public GameObject titleScreenObject;///< Public reference to the title screen parent object. All children are objects that appear on the title screen
+    public GameObject mapSelectObject;///< Public reference to the map select object. All children are objects that appear on the map select screen
+    private bool titleScreenActive;///< Indicates if the title screen is currently active
+    private bool mapSelectActive;///< Indicates if the map select screen is currently active
 
     void Awake()
     {
