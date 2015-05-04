@@ -1,7 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-
 /// <summary>
 /// Cityscript. This script has the logic for the buildings to determin whether a city is: 
 /// occupied

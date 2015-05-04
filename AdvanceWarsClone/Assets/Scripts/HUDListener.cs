@@ -1,13 +1,13 @@
-﻿///<summary>
+﻿using UnityEngine.UI;
+using UnityEngine;
+using System.Collections;
+
+///<summary>
 /// HUD listener. this script updates the HUD when a unit is selected
 ///<remarks>
 ///Author: Joshua Rand
 ///</remarks>
 ///</summary>
-using UnityEngine.UI;
-using UnityEngine;
-using System.Collections;
-
 public class HUDListener : MonoBehaviour
 {
     private Text unitText;///< Private reference to the child Text object, Displays the currently selected units Movement, Attack, Defense and Health

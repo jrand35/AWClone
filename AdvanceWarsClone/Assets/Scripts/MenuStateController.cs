@@ -1,13 +1,13 @@
-﻿///<summary>
+﻿using UnityEngine;
+using System.Collections;
+
+///<summary>
 ///The Game State Controller
 ///Defines the game states, determines when to change to the main game screen
 ///<remarks>
 ///Author: Joshua Rand
 ///</remarks>
 ///</summary>
-using UnityEngine;
-using System.Collections;
-
 public class MenuStateController : MonoBehaviour {
 
     /// <summary>

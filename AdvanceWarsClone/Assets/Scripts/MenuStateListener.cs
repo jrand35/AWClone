@@ -1,4 +1,7 @@
-﻿///<summary>
+﻿using UnityEngine;
+using System.Collections;
+
+///<summary>
 ///The Game State Listener.
 ///Listens for events from the menu state controller
 ///Defines what happens in each state of the game
@@ -7,8 +10,6 @@
 ///Author: Joshua Rand
 ///</remarks>
 ///</summary>
-using UnityEngine;
-using System.Collections;
 public class MenuStateListener : MonoBehaviour {
 
     private MenuStateController.menuStates currentState = MenuStateController.menuStates.titleScreen;///< The current state of the Game State Machine

@@ -1,15 +1,12 @@
-﻿///<summary>
+﻿using UnityEngine;
+using System.Collections;
+
+///<summary>
 ///The Unit's state machine, attached to all Unit GameObjects
 ///<remarks>
 ///Author: Joshua Rand
 ///</remarks>
 ///</summary>
-using UnityEngine;
-using System.Collections;
-
-/// <summary>
-/// Unit states. event handler
-/// </summary>
 public class UnitState : MonoBehaviour
 {
     public delegate void unitStateHandler(unitStates newState, GameObject caller);///< Delegate function called (selectively) whenever the unit state machine changes state

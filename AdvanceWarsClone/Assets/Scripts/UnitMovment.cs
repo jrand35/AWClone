@@ -7,8 +7,8 @@ using System.Collections;
 public class UnitMovment : MonoBehaviour {
 
 
-    private float movespeed = 1.0f;
-    public float movedistance;
+    private float movespeed = 1.0f; ///< Speed at which units can move
+    public float movedistance;///< Distance at which units are moving
 
 
 	// Use this for initialization
