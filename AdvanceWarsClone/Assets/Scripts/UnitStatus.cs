@@ -4,6 +4,11 @@ using System.Collections.Generic;
 /// <summary>
 /// This Script is made to handle lots of events, like attacking and moving. All of the players stats are here,
 /// as well as refrences to the colliders that detect whether or not there is an enemy in range.
+/// <remarks>
+/// Authors: 
+///     Main Code: Ben Melanson
+///     Movement Code: Josh Raymond
+/// </remarks>
 /// </summary>
 public class UnitStatus : MonoBehaviour {
     public int Movement;///< How far we can move in one turn.
@@ -24,7 +29,10 @@ public class UnitStatus : MonoBehaviour {
 	{
         Enemies = new List<UnitStatus>();
 	}
-    
+    /// <summary>
+    /// Upon instanciation, the script checks to see what team it belongs to and sets the enemy color.
+    /// This method also sets the unit state that is attached to the player.
+    /// </summary>
     void Awake()
     {
         if (ParentGameObject.gameObject.tag == "blue")
@@ -39,7 +47,9 @@ public class UnitStatus : MonoBehaviour {
 		
     }
 	
-    // Update is called once per frame
+    /// <summary>
+    /// The Update method checks to see if our player is selected, then allows the player to move until it is out of moves.
+    /// </summary>
 	void Update () 
     {
 		if (selected) {
@@ -65,18 +75,30 @@ public class UnitStatus : MonoBehaviour {
 			}
 		}
 	}
+    /// <summary>
+    /// controls movement in the X direction
+    /// </summary>
+    /// <param name="speed"></param>
 	void moveX(float speed)
 	{
 		ParentGameObject.transform.position += new Vector3(speed,0,0);
 		Movement--;
 		return;
 	}
+    /// <summary>
+    /// controls movement in the Y direction
+    /// </summary>
+    /// <param name="speed"></param>
 	void moveY(float speed)
 	{
 		ParentGameObject.transform.position += new Vector3(0, speed, 0);
 		Movement--;
 		return;
 	}
+    /// <summary>
+    /// Checks to see if any enemies are leaving the range collider. If they are, those enemies are removed from the list of possible attackable enemies.
+    /// </summary>
+    /// <param name="col"></param>
     void OnTriggerExit2D(Collider2D col)
     {
         if (col.gameObject.tag == EnemyColor) {
@@ -88,6 +110,10 @@ public class UnitStatus : MonoBehaviour {
 			}
         }
     }
+    /// <summary>
+    /// Checks to see if any enemies are entering the range collider. If they are, those enemies are added to the list of possible attackable enemies.
+    /// </summary>
+    /// <param name="col"></param>
     void OnTriggerEnter2D(Collider2D col)
     {
         if (col.gameObject.tag == EnemyColor)
@@ -97,7 +123,10 @@ public class UnitStatus : MonoBehaviour {
 			FireButton.SetActive(true);
         }
     }
-
+    /// <summary>
+    /// This method calculates how much damage it will apply to the enemy and checks the range collider for enemies. if it finds any, it attacks the first one in the list. 
+    /// This is called by the FireButton object
+    /// </summary>
 	public void AttackHim(){
 		int TotalAttack = Mathf.RoundToInt ((Health / 2) * Attack);
 		foreach (UnitStatus obj in Enemies) {
@@ -111,6 +140,10 @@ public class UnitStatus : MonoBehaviour {
 		}
 
 	}
+    /// <summary>
+    /// This is called by the AttackHim method. This takes the damage passed in by AttackHim and subtracts the units defense from it. Then it applies the remainder to the health.
+    /// </summary>
+    /// <param name="TotalAttack"></param>
     public void Attacked(int TotalAttack)
     {
         Health = Health - (TotalAttack - Defense);
@@ -118,6 +151,10 @@ public class UnitStatus : MonoBehaviour {
 			Destroy(ParentGameObject);
 		}
     }
+    /// <summary>
+    /// This is called by the UnitState script and theoretically is supposed to set only the selected unit to true. However we never got the code working right.
+    /// </summary>
+    /// <param name="yorn"></param>
 	public void AmISelected(bool yorn)
 	{
 		selected = yorn;
