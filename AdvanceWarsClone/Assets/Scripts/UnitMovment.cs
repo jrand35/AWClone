@@ -15,8 +15,10 @@ public class UnitMovment : MonoBehaviour {
 	void Start () {
 
 	}
-	
-	// Update is called once per frame
+
+    /// <summary>
+    /// The Update method allows the player to move until it is out of moves.
+    /// </summary>
 	void Update () {
 
         

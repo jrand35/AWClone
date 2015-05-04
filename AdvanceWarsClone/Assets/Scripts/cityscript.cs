@@ -19,21 +19,20 @@ public class cityscript : MonoBehaviour {
     public GameObject bluecity;///< Public reference to blue city GameObject
     public int healAmount;///< The amount of health to restore units
 
-
-	// Use this for initialization
-	void Start () {
-
-
-	
-	}
-	
+	/// <summary>
+	/// sets the unit occuping the city to the unit we occupied with
+	/// </summary>
+	/// <param name="call"></param>
     void OnTriggerEnter2D(Collider2D call)
     {
         //Debug.Log("enter trigger");
         unit = call.gameObject;
         occupied = true;
     }
-
+    /// <summary>
+    /// when the unit leaves the city we flush the variables
+    /// </summary>
+    /// <param name="call"></param>
     void OnTriggerExit2D(Collider2D call)
     {
         unit = null;
@@ -41,7 +40,9 @@ public class cityscript : MonoBehaviour {
         cityHealth = 10;
     }
 
-	// Update is called once per frame
+    /// <summary>
+    /// checks to see if occupied is true and starts to heal the unit occuping the city
+    /// </summary>
 	void Update () {
 
         if (occupied == true)
