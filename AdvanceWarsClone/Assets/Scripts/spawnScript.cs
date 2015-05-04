@@ -8,10 +8,10 @@ using System.Collections;
 public class spawnScript : MonoBehaviour {
 
 
-   public GameObject spawnpoint;
-   public GameObject infantry;
-   public GameObject mech;
-   public GameObject recon;
+   public GameObject spawnpoint; ///< Public reference to spawn position
+   public GameObject infantry; ///< Public reference to infantry prefab
+   public GameObject mech; ///< Public reference to mech prefab
+   public GameObject recon;///< Public reference to recon prefab
 
 
 

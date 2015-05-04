@@ -10,15 +10,15 @@ using System.Collections;
 /// </summary>
 public class cityscript : MonoBehaviour {
 
-    private GameObject unit;
-    public bool occupied;
-    public int cityHealth = 10;
-    private string citytag;
+    private GameObject unit;///< Private reference to colliding unit
+    public bool occupied;///< Determines if a city is currently occupied by units
+    public int cityHealth = 10;///< When this is set to 0, the city is captured by a team
+    private string citytag;///< Defines which team has captured the city
 
-    public GameObject city;
-    public GameObject redcity;
-    public GameObject bluecity;
-    public int healAmount;
+    public GameObject city;///< Public reference to city GameObject
+    public GameObject redcity;///< Public reference to red city GameObject
+    public GameObject bluecity;///< Public reference to blue city GameObject
+    public int healAmount;///< The amount of health to restore units
 
 
 	// Use this for initialization
