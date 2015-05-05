@@ -3,7 +3,7 @@ Advance Wars Clone
 
 	Author Information:
 		Written by: Josh Rand, Josh Verner, Josh Raymond, Josh "Ben" Melanson, and Josh "Micah" Agpaoa
-		For CS409 A
+		For CS 229
 		email: jrand@student.dwc.edu, jverner@student.dwc.edu, jraymond@student.dwc.edu, bmelanson@student.dwc.edu, magpaoa@student.dwc.edu
 
   Introduction
