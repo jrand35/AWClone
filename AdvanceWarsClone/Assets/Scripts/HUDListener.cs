@@ -1,4 +1,9 @@
-﻿using UnityEngine.UI;
+﻿//**********************************************************************************
+//* UnitState class: The Unit's state machine
+//**********************************************************************************
+//* Joshua Rand
+//**********************************************************************************
+using UnityEngine.UI;
 using UnityEngine;
 using System.Collections;
 
@@ -31,6 +36,7 @@ public class HUDListener : MonoBehaviour
     /// <param name="obj"></param>
     void OnUnitStateChange(UnitState.unitStates newState, GameObject obj)
     {
+        //Update unit's stats
         if (newState == UnitState.unitStates.selected)
         {
             if (obj != null)
@@ -42,6 +48,8 @@ public class HUDListener : MonoBehaviour
 					"Health: " + unitStatus.Health;
             }
         }
+        
+        //Do not display any unit's stats
         else if (newState == UnitState.unitStates.idle)
         {
             UnitStatus unitStatus = obj.GetComponent<UnitStatus>();
@@ -56,11 +64,5 @@ public class HUDListener : MonoBehaviour
     void Start()
     {
         unitText = GetComponentInChildren<Text>();
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
     }
 }

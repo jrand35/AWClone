@@ -1,4 +1,10 @@
-﻿using UnityEngine;
+﻿//**********************************************************************************
+//* UnitState class: The Unit's state machine
+//**********************************************************************************
+//* Joshua Rand
+//**********************************************************************************
+
+using UnityEngine;
 using System.Collections;
 
 ///<summary>
@@ -31,35 +37,36 @@ public class UnitState : MonoBehaviour
         attacking
     }
 
+    /// <summary>
+    /// Used for assigning variables
+    /// </summary>
     void Awake()
     {
+        //Get UnitStatus reference
 		unitStatus = this.GetComponentInChildren<UnitStatus>();
-    }
-
-    void OnEnable()
-    {
-        
-    }
-
-    void OnDisable()
-    {
-        
     }
 
     void Update()
     {
+        //Get the position of the mouse
         Vector3 mouseWorldPoint = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         Vector2 mousePos = new Vector2(mouseWorldPoint.x, mouseWorldPoint.y);
+
+        //Left mouse button is clicked
         if (Input.GetMouseButtonDown(0))
         {
+            //If hovering over a unit
             if (Physics2D.OverlapPoint(mousePos, Unit))
             {
-                bool deleg;
+                //If clicking on this unit
                 if (Physics2D.OverlapPoint(mousePos) == collider2D)
                     OnUnitStateChange(unitStates.selected, gameObject, true);
+                //If clicking on a different unit
+                //Set this unit's state to idle, but do not communicate with HUDListener
                 else
                     OnUnitStateChange(unitStates.idle, gameObject, false);
             }
+            //If not hovering over any unit
             else if (!Physics2D.OverlapPoint(mousePos, Unit))
             {
                 OnUnitStateChange(unitStates.idle, gameObject, true);
@@ -67,24 +74,8 @@ public class UnitState : MonoBehaviour
         }
     }
 
-    void LateUpdate()
-    {
-        onStateCycle();
-    }
-
-    void OnMouseEnter()
-    {
-        
-        
-    }
-
-    void OnMouseExit()
-    {
-        
-    }
-
     /// <summary>
-    /// Called in LateUpdate(), determines what unit does based on its current state
+    /// Determines what unit does based on its current state
     /// </summary>
     void onStateCycle()
     {
@@ -118,15 +109,9 @@ public class UnitState : MonoBehaviour
     /// <param name="delegEvent"></param>
     void OnUnitStateChange(unitStates newState, GameObject caller, bool delegEvent)
     {
-        //Does return if newState == currentState
-        //if (caller != gameObject)
-        //    return;
 
         if (delegEvent)
             unitStateChangeEvent(newState, caller);
-
-        //TODO: Check that a valid state transition is requested
-        // if not return;
 
         previousState = currentState;
         currentState = newState;
@@ -142,11 +127,10 @@ public class UnitState : MonoBehaviour
                 break;
 
             case unitStates.inactive:
-                //anim.SetBool("Inactive", true);
                 break;
 
             case unitStates.dead:
-                Destroy(caller.gameObject);    //May change
+                Destroy(caller.gameObject);
                 break;
 
             case unitStates.selected:
@@ -155,13 +139,12 @@ public class UnitState : MonoBehaviour
                 break;
 
             case unitStates.moving:
-                //anim.SetBool("Moving", true);
                 break;
 
             case unitStates.attacking:
-                //anim.SetBool("Attacking", true);
                 break;
         }
+        onStateCycle();
     }
 
     

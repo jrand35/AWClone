@@ -1,4 +1,11 @@
-﻿using UnityEngine;
+﻿//**********************************************************************************
+//* UnitStatus class: Stores the stats of each unit
+//**********************************************************************************
+//* Ben Melanson: Main Code
+//* Josh Raymond: Movement Code
+//**********************************************************************************
+
+using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 /// <summary>
@@ -35,10 +42,13 @@ public class UnitStatus : MonoBehaviour {
     /// </summary>
     void Awake()
     {
+        //If the unit is on the blue team, the enemy team is red
         if (ParentGameObject.gameObject.tag == "blue")
         {
             EnemyColor = "red";
         }
+
+        //If the unit is on the red team, the enemy team is blue
         if (ParentGameObject.gameObject.tag == "red")
         {
             EnemyColor = "blue";
@@ -54,6 +64,7 @@ public class UnitStatus : MonoBehaviour {
     {
 		if (selected) {
 			
+            //Move in a direction
 			if (Movement > 0) {
 				
 				if (Input.GetKeyDown (KeyCode.RightArrow)) {

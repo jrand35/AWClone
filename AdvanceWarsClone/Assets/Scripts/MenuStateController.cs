@@ -1,4 +1,10 @@
-﻿using UnityEngine;
+﻿//**********************************************************************************
+//* MenuStateController class: The Game's State Machine
+//**********************************************************************************
+//* Joshua Rand
+//**********************************************************************************
+
+using UnityEngine;
 using System.Collections;
 
 ///<summary>
@@ -29,7 +35,4 @@ public class MenuStateController : MonoBehaviour {
     {
         onStateChange(MenuStateController.menuStates.mapSelect);
     }
-
-	void LateUpdate () {
-	}
 }

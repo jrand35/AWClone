@@ -1,4 +1,8 @@
-﻿using UnityEngine;
+﻿//**********************************************************************************
+//* cityscript class: Controls the logic of the buildings
+//**********************************************************************************
+
+using UnityEngine;
 using System.Collections;
 
 /// <summary>
@@ -47,9 +51,11 @@ public class cityscript : MonoBehaviour {
 
         if (occupied == true)
         {
+            //Heal the unit
             if (unit.tag == gameObject.tag)
                 heal();
 
+            //Or capture the city and change the city tag
             else if (occupied == true)
                 capture();
         }
@@ -63,6 +69,7 @@ public class cityscript : MonoBehaviour {
 	/// </summary>
     private void heal()
     {
+        //Only add health if unit's health is under 10
         if (unit.GetComponent<UnitStatus>().Health <= 10)
         {
             if (unit.GetComponent<UnitStatus>().Health == 10)
